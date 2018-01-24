@@ -1,0 +1,99 @@
+{
+  "project_info": {
+    "project_number": "936155782170",
+    "firebase_url": "https://webtest-f7ea1.firebaseio.com",
+    "project_id": "webtest-f7ea1",
+    "storage_bucket": "webtest-f7ea1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:936155782170:android:8b4a51882536816d",
+        "android_client_info": {
+          "package_name": "com.dell.gpstest2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "936155782170-3gd7t2u554f1nephg00cabevkgvfopr4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.dell.gpstest2",
+            "certificate_hash": "5a13027d5c504141478e8b76087d7dbe3dabe966"
+          }
+        },
+        {
+          "client_id": "936155782170-u8h1386amp8ee6du5c0957223094nuql.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBdx8537W8CrTAaJnXpcafLgK1RBfXzT_k"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "936155782170-u8h1386amp8ee6du5c0957223094nuql.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:936155782170:android:7f8bac6727e45dbb",
+        "android_client_info": {
+          "package_name": "com.dell.sped"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "936155782170-oomfnaaca3k34otd39eo5l99t0psujch.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.dell.sped",
+            "certificate_hash": "5a13027d5c504141478e8b76087d7dbe3dabe966"
+          }
+        },
+        {
+          "client_id": "936155782170-u8h1386amp8ee6du5c0957223094nuql.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBdx8537W8CrTAaJnXpcafLgK1RBfXzT_k"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "936155782170-u8h1386amp8ee6du5c0957223094nuql.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
