@@ -5,12 +5,12 @@ package com.dell.sped;
  */
 
 public class User {
-    String name;
-    String image;
-    String email;
-    String online;
-    String lat;
-    String lo;
+    private String name;
+    private String image;
+    private String email;
+    private String online;
+    private String lat;
+    private String lo;
 
     public User() {
     }

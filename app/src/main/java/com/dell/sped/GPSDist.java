@@ -21,7 +21,6 @@ public class GPSDist    {
         return round(wynik2, 2);
     }
 
-
     public static double round(double value, int places){
         if (places < 0) throw new IllegalArgumentException();
         long factor = (long) Math.pow(10, places);
