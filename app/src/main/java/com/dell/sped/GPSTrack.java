@@ -10,19 +10,23 @@ import android.os.Bundle;
 import androidx.core.content.ContextCompat;
 import android.widget.Toast;
 
+import com.google.android.gms.location.FusedLocationProviderClient;
+
 /**
  * Created by Dell on 21.01.2018.
  */
 
 public class GPSTrack implements LocationListener {
     Context context;
+    private FusedLocationProviderClient fusedLocationClient;
+
     public GPSTrack(Context c){
         context = c;
     }
 
 
     public Location getLocation(){
-        if (ContextCompat.checkSelfPermission(context, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED){
+        if (ContextCompat.checkSelfPermission(context, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED){
             Toast.makeText(context,"Permission not granted",Toast.LENGTH_SHORT).show();
             return null;
         }

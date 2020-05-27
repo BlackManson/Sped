@@ -12,7 +12,10 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.location.FusedLocationProviderClient;
+import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -43,6 +46,8 @@ public class ProfileActivity extends AppCompatActivity {
     Button buttonList;
     Button buttonMap;
     GPSTrack gpsTrack;
+    private FusedLocationProviderClient fusedLocationClient;
+
 
     @Override
     protected void onStart() {
@@ -59,18 +64,26 @@ public class ProfileActivity extends AppCompatActivity {
     }
 
     public void locChange(){
-        try{
-            gpsTrack = new GPSTrack(getApplicationContext());
-            Location location = gpsTrack.getLocation();
-            String lo = Double.toString(location.getLongitude());
-            String lat = Double.toString(location.getLatitude());
-            databaseReference.child("lo").setValue(lo);
-            databaseReference.child("lat").setValue(lat);
-        }
-        catch (NullPointerException e){
+        //try{
 
-        }
+        //}
+       // catch (NullPointerException e){
 
+       // }
+
+        fusedLocationClient.getLastLocation()
+                .addOnSuccessListener(this, new OnSuccessListener<Location>() {
+                    @Override
+                    public void onSuccess(Location location) {
+                        // Got last known location. In some rare situations this can be null.
+                        if (location != null) {
+                            String lo = Double.toString(location.getLongitude());
+                            String lat = Double.toString(location.getLatitude());
+                            databaseReference.child("lo").setValue(lo);
+                            databaseReference.child("lat").setValue(lat);
+                        }
+                    }
+                });
     }
 
     @Override
@@ -83,6 +96,8 @@ public class ProfileActivity extends AppCompatActivity {
         circleImageView = (CircleImageView)findViewById(R.id.imageViewProfile);
         buttonList = (Button)findViewById(R.id.buttonList);
         buttonMap = (Button)findViewById(R.id.buttonMap);
+
+        fusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
 
         firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
         String current_uid = firebaseUser.getUid();

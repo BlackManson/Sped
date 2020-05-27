@@ -12,6 +12,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
+import com.google.android.gms.location.FusedLocationProviderClient;
+import com.google.android.gms.location.LocationServices;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.squareup.picasso.Picasso;
@@ -22,6 +25,7 @@ public class UserListActivity extends AppCompatActivity {
     private DatabaseReference databaseReferenceUsers;
     private DatabaseReference onlineReference;
     private RecyclerView mUsersList;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -68,7 +72,10 @@ public class UserListActivity extends AppCompatActivity {
 
     public static class UsersViewHolder extends RecyclerView.ViewHolder{
         View mView;
+        FusedLocationProviderClient fusedLocationClient;
+
         public UsersViewHolder(View itemView) {
+
             super(itemView);
             mView = itemView;
         }
@@ -97,25 +104,28 @@ public class UserListActivity extends AppCompatActivity {
             mUserOnlineView.setAllCaps(true);
         }
 
-        public void setDist(String lat, String lo, Context c){
-           try{
-               GPSTrack gpsTrack = new GPSTrack(c);
-               Location my = gpsTrack.getLocation();
-               GPSDist gpsDist = new GPSDist(my.getLatitude(),my.getLongitude(),Double.parseDouble(lat),Double.parseDouble(lo));
-               TextView mUserDistView = (TextView) mView.findViewById(R.id.textViewDistRow);
-               double dist = gpsDist.getDist();
-               int dist1 = (int) dist;
-               if(dist1==0){
-                   mUserDistView.setText("");
-               }else {
-                   mUserDistView.setText("~"+dist1+ " km");
-               }
+        public void setDist(final String lat, final String lo, Context c){
+            fusedLocationClient = LocationServices.getFusedLocationProviderClient(mView.getContext());
+
+               fusedLocationClient.getLastLocation().addOnSuccessListener(new OnSuccessListener<Location>() {
+                   @Override
+                   public void onSuccess(Location my) {
+                       GPSDist gpsDist = new GPSDist(my.getLatitude(), my.getLongitude(), Double.parseDouble(lat), Double.parseDouble(lo));
+                       TextView mUserDistView = (TextView) mView.findViewById(R.id.textViewDistRow);
+                       double dist = gpsDist.getDist();
+                       int dist1 = (int) dist;
+                       if (dist1 == 0) {
+                           mUserDistView.setText("");
+                       } else {
+                           mUserDistView.setText("~" + dist1 + " km");
+                       }
+                   }
+               });
+               //GPSTrack gpsTrack = new GPSTrack(c);
+               //Location my = gpsTrack.getLocation();
+
+
            }
-            catch (NullPointerException e){
-
-            }
-
-        }
     }
 
 
