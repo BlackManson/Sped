@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/AndroidStudioProjects-Sped.iml" filepath="$PROJECT_DIR$/AndroidStudioProjects-Sped.iml" group="Sped" />
       <module fileurl="file://$PROJECT_DIR$/Sped.iml" filepath="$PROJECT_DIR$/Sped.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/Sped-app.iml" filepath="$PROJECT_DIR$/app/Sped-app.iml" group="Sped/app" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

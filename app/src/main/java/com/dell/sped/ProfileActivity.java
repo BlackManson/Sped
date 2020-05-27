@@ -1,24 +1,17 @@
 package com.dell.sped;
 
 import android.app.ProgressDialog;
-import android.content.Context;
 import android.content.Intent;
 import android.location.Location;
 import android.net.Uri;
-import android.support.annotation.NonNull;
-import android.support.v7.app.AppCompatActivity;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
@@ -66,12 +59,18 @@ public class ProfileActivity extends AppCompatActivity {
     }
 
     public void locChange(){
-        gpsTrack = new GPSTrack(getApplicationContext());
-        Location location = gpsTrack.getLocation();
-        String lo = Double.toString(location.getLongitude());
-        String lat = Double.toString(location.getLatitude());
-        databaseReference.child("lo").setValue(lo);
-        databaseReference.child("lat").setValue(lat);
+        try{
+            gpsTrack = new GPSTrack(getApplicationContext());
+            Location location = gpsTrack.getLocation();
+            String lo = Double.toString(location.getLongitude());
+            String lat = Double.toString(location.getLatitude());
+            databaseReference.child("lo").setValue(lo);
+            databaseReference.child("lat").setValue(lat);
+        }
+        catch (NullPointerException e){
+
+        }
+
     }
 
     @Override

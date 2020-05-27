@@ -1,27 +1,20 @@
 package com.dell.sped;
 
 import android.content.Context;
-import android.content.Intent;
 import android.graphics.Color;
 import android.location.Location;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
 import com.squareup.picasso.Picasso;
-
-import java.util.Collections;
-import java.util.Comparator;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
@@ -105,16 +98,21 @@ public class UserListActivity extends AppCompatActivity {
         }
 
         public void setDist(String lat, String lo, Context c){
-            GPSTrack gpsTrack = new GPSTrack(c);
-            Location my = gpsTrack.getLocation();
-            GPSDist gpsDist = new GPSDist(my.getLatitude(),my.getLongitude(),Double.parseDouble(lat),Double.parseDouble(lo));
-            TextView mUserDistView = (TextView) mView.findViewById(R.id.textViewDistRow);
-            double dist = gpsDist.getDist();
-            int dist1 = (int) dist;
-            if(dist1==0){
-                mUserDistView.setText("");
-            }else {
-                mUserDistView.setText("~"+dist1+ " km");
+           try{
+               GPSTrack gpsTrack = new GPSTrack(c);
+               Location my = gpsTrack.getLocation();
+               GPSDist gpsDist = new GPSDist(my.getLatitude(),my.getLongitude(),Double.parseDouble(lat),Double.parseDouble(lo));
+               TextView mUserDistView = (TextView) mView.findViewById(R.id.textViewDistRow);
+               double dist = gpsDist.getDist();
+               int dist1 = (int) dist;
+               if(dist1==0){
+                   mUserDistView.setText("");
+               }else {
+                   mUserDistView.setText("~"+dist1+ " km");
+               }
+           }
+            catch (NullPointerException e){
+
             }
 
         }
