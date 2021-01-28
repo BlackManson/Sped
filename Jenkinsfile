@@ -9,5 +9,11 @@ pipeline {
              sh './gradlew build'
           }
       }
+      stage("Assemble"){
+  
+          steps {
+             sh './gradlew assembleDebug'
+          }
+      }
    }
 }
