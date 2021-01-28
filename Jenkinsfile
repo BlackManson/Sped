@@ -9,11 +9,5 @@ pipeline {
              sh './gradlew build'
           }
       }
-      stage("End"){
-  
-          steps {
-              
-          }
-      }
    }
 }
