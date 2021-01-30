@@ -20,6 +20,12 @@ pipeline {
       }
     }
 
+    stage('') {
+      steps {
+        sh '/Users/lukaszkolodziej/Library/Android/sdk/emulator -avd Pixel_2_API_30'
+      }
+    }
+
   }
   post {
     always {
