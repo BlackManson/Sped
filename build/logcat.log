@@ -1,0 +1,601 @@
+--------- beginning of main
+01-30 13:06:08.222  1961  2038 D AlarmManagerService: Kernel timezone updated to -60 minutes west of GMT
+--------- beginning of system
+01-30 13:06:08.224  1961  1961 D DevicePolicyManager: updateSystemUpdateFreezePeriodsRecord
+01-30 13:06:08.226  1961  1961 W SyncManager: Clock is valid now.
+01-30 13:06:08.229  1961  1961 D ConditionProviders.SCP: onReceive android.intent.action.TIME_SET
+01-30 13:06:08.231  1961  1961 D ConditionProviders.SCP: evaluateSubscriptionLocked cal=ScheduleCalendar[mDays={1, 2, 3, 4, 5, 6, 7}, mSchedule=ScheduleInfo{days=[1, 2, 3, 4, 5, 6, 7], startHour=22, startMinute=0, endHour=7, endMinute=0, exitAtAlarm=true, nextAlarm=Thu Jan 01 01:00:00 GMT+01:00 1970 (0)}], now=Sat Jan 30 13:06:08 GMT+01:00 2021 (1612008368229), nextUserAlarmTime=Thu Jan 01 01:00:00 GMT+01:00 1970 (0)
+01-30 13:06:08.231  1961  1961 D ConditionProviders.SCP: notifyCondition condition://android/schedule?days=1.2.3.4.5.6.7&start=22.0&end=7.0&exitAtAlarm=true STATE_FALSE reason=!meetsSchedule
+01-30 13:06:08.233  1961  1961 D ConditionProviders.SCP: Scheduling evaluate for Sat Jan 30 22:00:00 GMT+01:00 2021 (1612040400000), in +8h53m51s771ms, now=Sat Jan 30 13:06:08 GMT+01:00 2021 (1612008368229)
+01-30 13:06:08.307  2103  2103 D KeyguardClockSwitch: Updating clock: 106
+01-30 13:06:08.309  2651  5104 I Vision  : Requesting optional module download of ocr.
+01-30 13:06:08.326  2651  5104 I Vision  : Checking for download completion for 110677 -- ocr
+01-30 13:06:08.327  4318  4318 W ConnectionTracker: Exception thrown while unbinding
+01-30 13:06:08.327  4318  4318 W ConnectionTracker: java.lang.IllegalArgumentException: Service not registered: njn@c0d4599
+01-30 13:06:08.327  4318  4318 W ConnectionTracker: 	at android.app.LoadedApk.forgetServiceDispatcher(LoadedApk.java:1751)
+01-30 13:06:08.327  4318  4318 W ConnectionTracker: 	at android.app.ContextImpl.unbindService(ContextImpl.java:1776)
+01-30 13:06:08.327  4318  4318 W ConnectionTracker: 	at android.content.ContextWrapper.unbindService(ContextWrapper.java:741)
+01-30 13:06:08.327  4318  4318 W ConnectionTracker: 	at android.content.ContextWrapper.unbindService(ContextWrapper.java:741)
+01-30 13:06:08.327  4318  4318 W ConnectionTracker: 	at android.content.ContextWrapper.unbindService(ContextWrapper.java:741)
+01-30 13:06:08.327  4318  4318 W ConnectionTracker: 	at slx.c(:com.google.android.gms@202414022@20.24.14 (040700-319035315):4)
+01-30 13:06:08.327  4318  4318 W ConnectionTracker: 	at slx.a(:com.google.android.gms@202414022@20.24.14 (040700-319035315):6)
+01-30 13:06:08.327  4318  4318 W ConnectionTracker: 	at njq.g(:com.google.android.gms@202414022@20.24.14 (040700-319035315):1)
+01-30 13:06:08.327  4318  4318 W ConnectionTracker: 	at njq.a(:com.google.android.gms@202414022@20.24.14 (040700-319035315):9)
+01-30 13:06:08.327  4318  4318 W ConnectionTracker: 	at nno.j(:com.google.android.gms@202414022@20.24.14 (040700-319035315):3)
+01-30 13:06:08.327  4318  4318 W ConnectionTracker: 	at npf.j(:com.google.android.gms@202414022@20.24.14 (040700-319035315):0)
+01-30 13:06:08.327  4318  4318 W ConnectionTracker: 	at com.google.android.gms.car.CarChimeraService.onDestroy(:com.google.android.gms@202414022@20.24.14 (040700-319035315):2)
+01-30 13:06:08.327  4318  4318 W ConnectionTracker: 	at qma.onDestroy(:com.google.android.gms@202414022@20.24.14 (040700-319035315):3)
+01-30 13:06:08.327  4318  4318 W ConnectionTracker: 	at android.app.ActivityThread.handleStopService(ActivityThread.java:4116)
+01-30 13:06:08.327  4318  4318 W ConnectionTracker: 	at android.app.ActivityThread.access$1900(ActivityThread.java:219)
+01-30 13:06:08.327  4318  4318 W ConnectionTracker: 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1896)
+01-30 13:06:08.327  4318  4318 W ConnectionTracker: 	at android.os.Handler.dispatchMessage(Handler.java:107)
+01-30 13:06:08.327  4318  4318 W ConnectionTracker: 	at android.os.Looper.loop(Looper.java:214)
+01-30 13:06:08.327  4318  4318 W ConnectionTracker: 	at android.app.ActivityThread.main(ActivityThread.java:7356)
+01-30 13:06:08.327  4318  4318 W ConnectionTracker: 	at java.lang.reflect.Method.invoke(Native Method)
+01-30 13:06:08.327  4318  4318 W ConnectionTracker: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:492)
+01-30 13:06:08.327  4318  4318 W ConnectionTracker: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:930)
+01-30 13:06:08.327  4318  4318 I CAR.TEL.CarCall: clearCalls [CONTEXT service_id=13 ]
+01-30 13:06:08.329  4318  4318 I CAR.TEL.Service: Clearing calls during removePhone [CONTEXT service_id=13 ]
+01-30 13:06:08.515  1961  1991 I libprocessgroup: Successfully killed process cgroup uid 10092 pid 4263 in 382ms
+01-30 13:06:08.569  1706  1706 D Zygote  : Forked child process 5108
+01-30 13:06:08.571  1706  1706 I Zygote  : Process 4263 exited due to signal 9 (Killed)
+01-30 13:06:08.636  1961  1990 W ActivityManager: Slow operation: 234ms so far, now at startProcess: returned from zygote!
+01-30 13:06:08.637  1961  1990 W ActivityManager: Slow operation: 235ms so far, now at startProcess: done updating battery stats
+01-30 13:06:08.638  1961  1990 W ActivityManager: Slow operation: 235ms so far, now at startProcess: building log message
+01-30 13:06:08.638  1961  1990 I ActivityManager: Start proc 5108:com.google.android.deskclock/u0a125 for broadcast {com.google.android.deskclock/com.android.deskclock.AlarmInitReceiver}
+01-30 13:06:08.638  1961  1990 W ActivityManager: Slow operation: 236ms so far, now at startProcess: starting to update pids map
+01-30 13:06:08.639  1961  1990 W ActivityManager: Slow operation: 237ms so far, now at startProcess: done updating pids map
+01-30 13:06:08.656  5108  5108 W droid.deskcloc: Unexpected CPU variant for X86 using defaults: x86
+01-30 13:06:08.795  1961  1988 I UsageStatsService: Time changed in UsageStats by 225 seconds
+01-30 13:06:08.795  1961  1988 I UsageStatsService: User[0] Flushing usage stats to disk
+01-30 13:06:08.887  5108  5108 D ApplicationLoaders: Returning zygote-cached class loader: /system/framework/android.hidl.base-V1.0-java.jar
+01-30 13:06:08.887  5108  5108 D ApplicationLoaders: Returning zygote-cached class loader: /system/framework/android.hidl.manager-V1.0-java.jar
+01-30 13:06:08.888  5108  5108 D ApplicationLoaders: Returning zygote-cached class loader: /system/framework/android.hidl.base-V1.0-java.jar
+01-30 13:06:08.888  2490  2502 I .gms.persisten: Background young concurrent copying GC freed 79801(4582KB) AllocSpace objects, 24(832KB) LOS objects, 37% free, 8925KB/14MB, paused 1.479ms total 637.545ms
+01-30 13:06:08.923  1961  1988 I UsageStatsDatabase: Time changed by +3m45s99ms. files deleted: 0 files moved: 4
+01-30 13:06:08.934  5108  5108 I droid.deskcloc: The ClassLoaderContext is a special shared library.
+01-30 13:06:09.014  1961  1988 I UsageStatsService: User[0] Rollover scheduled @ 2021-01-31 12:58:22(1612094302465)
+01-30 13:06:09.052  5108  5108 W PrimesInit: Primes instant initialization
+01-30 13:06:09.053  5108  5130 W Primes  : background initialization
+01-30 13:06:09.067  5108  5108 I GAv4    : Google Analytics 11.0.11 is starting up. To enable debug logging on a device run:
+01-30 13:06:09.067  5108  5108 I GAv4    :   adb shell setprop log.tag.GAv4 DEBUG
+01-30 13:06:09.067  5108  5108 I GAv4    :   adb logcat -s GAv4
+01-30 13:06:09.208  1961  5107 I ActivityManager: Killing 4318:com.google.android.gms:car/u0a109 (adj 985): empty #17
+01-30 13:06:09.212  5108  5134 W GAv4    : AnalyticsReceiver is not registered or is disabled. Register the receiver for reliable dispatching on non-Google Play devices. See http://goo.gl/8Rd3yj for instructions.
+01-30 13:06:09.225  5108  5130 I PrimesTesting: GserviceFlagsSupplier.get()
+01-30 13:06:09.263  5108  5134 W GAv4    : CampaignTrackingReceiver is not registered, not exported or is disabled. Installation campaign tracking is not possible. See http://goo.gl/8Rd3yj for instructions.
+01-30 13:06:09.269  2651  3167 I FontLog : Received query Google Sans:500, URI content://com.google.android.gms.fonts [CONTEXT service_id=132 ]
+01-30 13:06:09.270  5108  5134 W GAv4    : AnalyticsService not registered in the app manifest. Hits might not be delivered reliably. See http://goo.gl/8Rd3yj for instructions.
+01-30 13:06:09.284  2398  2419 I s.nexuslaunche: Background young concurrent copying GC freed 23409(1549KB) AllocSpace objects, 13(412KB) LOS objects, 47% free, 2567KB/4896KB, paused 4.608ms total 172.988ms
+01-30 13:06:09.287  2651  3167 I FontLog : Query [Google Sans:500] resolved to {Google Sans, wdth 100.0, wght 500, ital 0.0, bestEffort false} [CONTEXT service_id=132 ]
+01-30 13:06:09.300  1706  1706 I Zygote  : Process 4318 exited due to signal 9 (Killed)
+01-30 13:06:09.325  2651  3167 I FontLog : Font PFD returned from cache for {Google Sans, wdth 100.0, wght 500, ital 0.0, bestEffort false} [CONTEXT service_id=132 ]
+01-30 13:06:09.325  2651  3167 I FontLog : Fetch {Google Sans, wdth 100.0, wght 500, ital 0.0, bestEffort false} end status Status{statusCode=SUCCESS, resolution=null} [CONTEXT service_id=132 ]
+01-30 13:06:09.332  1961  1991 I libprocessgroup: Successfully killed process cgroup uid 10109 pid 4318 in 122ms
+01-30 13:06:09.335  2651  3167 I FontLog : Pulling font file for id = 6, cache size = 6 [CONTEXT service_id=132 ]
+01-30 13:06:09.343  2651  3167 I FontLog : Received query Google Sans, URI content://com.google.android.gms.fonts [CONTEXT service_id=132 ]
+01-30 13:06:09.344  2651  3167 I FontLog : Query [Google Sans] resolved to {Google Sans, wdth 100.0, wght 400, ital 0.0, bestEffort false} [CONTEXT service_id=132 ]
+01-30 13:06:09.345  2651  3167 I FontLog : Font PFD returned from cache for {Google Sans, wdth 100.0, wght 400, ital 0.0, bestEffort false} [CONTEXT service_id=132 ]
+01-30 13:06:09.346  2651  3167 I FontLog : Fetch {Google Sans, wdth 100.0, wght 400, ital 0.0, bestEffort false} end status Status{statusCode=SUCCESS, resolution=null} [CONTEXT service_id=132 ]
+01-30 13:06:09.353  2651  2668 I FontLog : Pulling font file for id = 7, cache size = 7 [CONTEXT service_id=132 ]
+01-30 13:06:09.368  5108  5108 I AlarmClock: AlarmInitReceiver android.intent.action.TIME_SET
+01-30 13:06:09.397  5108  5137 I AlarmClock: Connected Dock: null
+01-30 13:06:09.402  5108  5137 I AlarmClock: Removing AlarmClockInfo
+01-30 13:06:09.405  5108  5108 I AlarmClock: DigitalAppWidgetProvider processing Intent { act=android.intent.action.TIME_SET flg=0x25200010 cmp=com.google.android.deskclock/com.android.alarmclock.DigitalAppWidgetProvider }
+01-30 13:06:09.410  5108  5108 D AlarmClock: Timing: [Digital Widget] [Widget Data Fetch]: 5 ms
+01-30 13:06:09.424  1961  4838 I ActivityManager: Killing 4345:com.google.process.gapps/u0a119 (adj 985): empty #17
+01-30 13:06:09.451  2651  5139 I SystemUpdate: [Installation,ReceiverIntentOperation] Received intent: Intent { act=android.intent.action.TIME_SET flg=0x25200010 cmp=com.google.android.gms/.chimera.GmsIntentOperationService$PersistentTrustedReceiver }.
+01-30 13:06:09.489  1706  1706 I Zygote  : Process 4345 exited due to signal 9 (Killed)
+01-30 13:06:09.510  2651  5142 I SystemUpdate: [Execution,InstallationEventIntentOperation] Handling event of type 6.
+01-30 13:06:09.515  1961  1991 I libprocessgroup: Successfully killed process cgroup uid 10119 pid 4345 in 88ms
+01-30 13:06:09.520  2651  5104 I SystemUpdate: [Execution,InstallationIntentOperation] Received intent: Intent { act=com.google.android.gms.update.INSTALL_UPDATE cat=[targeted_intent_op_prefix:.update.execution.InstallationIntentOperation] cmp=com.google.android.gms/.chimera.GmsIntentOperationService }.
+01-30 13:06:09.533  2651  5104 I SystemUpdate: [Execution,ExecutionManager] Action finished-execution executed for 0.00 seconds.
+01-30 13:06:09.628  1961  1988 E memtrack: Couldn't load memtrack module
+01-30 13:06:09.628  1961  1988 W android.os.Debug: failed to get memory consumption info: -1
+01-30 13:06:10.400  1961  1988 E memtrack: Couldn't load memtrack module
+01-30 13:06:10.400  1961  1988 W android.os.Debug: failed to get memory consumption info: -1
+01-30 13:06:12.762  1961  1988 E memtrack: Couldn't load memtrack module
+01-30 13:06:12.762  1961  1988 W android.os.Debug: failed to get memory consumption info: -1
+01-30 13:06:13.158  3416  3518 I MicroDetectionWorker: #startMicroDetector [speakerMode: 0]
+01-30 13:06:13.160  3416  3518 W ErrorReporter: reportError [type: 211, code: 393244, bug: 0]: errorCode: 393244, engine: 0
+01-30 13:06:13.168  3416  3518 I MicroDetector: Keeping mic open: false
+01-30 13:06:13.168  3416  3518 I MicroDetectionWorker: #onError(false)
+01-30 13:06:15.067  1705  5148 E ResolverController: No valid NAT64 prefix (101, <unspecified>/0)
+01-30 13:06:15.088  2651  4512 W GAv4-SVC: Network compressed POST connection error: java.net.ConnectException: Failed to connect to ssl.google-analytics.com/:::443
+01-30 13:06:18.174  3416  3518 I MicroDetectionWorker: #startMicroDetector [speakerMode: 0]
+01-30 13:06:18.182  3416  3518 W ErrorReporter: reportError [type: 211, code: 393244, bug: 0]: errorCode: 393244, engine: 0
+01-30 13:06:18.183  3416  3518 I MicroDetector: Keeping mic open: false
+01-30 13:06:18.183  3416  3518 I MicroDetectionWorker: #onError(false)
+01-30 13:06:18.353  1961  1988 E memtrack: Couldn't load memtrack module
+01-30 13:06:18.353  1961  1988 W android.os.Debug: failed to get memory consumption info: -1
+01-30 13:06:18.414  1961  1988 E memtrack: Couldn't load memtrack module
+01-30 13:06:18.414  1961  1988 W android.os.Debug: failed to get memory consumption info: -1
+01-30 13:06:18.420  2651  5150 I Vision  : Requesting optional module download of ocr.
+01-30 13:06:18.420  2651  5150 I Vision  : Exceeded maximum feature download tries for ocr
+01-30 13:06:18.420  2651  5150 W Vision  : Request of optional module download of ocr failed.
+01-30 13:06:18.422  2651  5150 I Vision  : Checking for download completion for 120774 -- ocr
+01-30 13:06:18.505  1961  1988 E memtrack: Couldn't load memtrack module
+01-30 13:06:18.505  1961  1988 W android.os.Debug: failed to get memory consumption info: -1
+01-30 13:06:18.518  1961  1988 E memtrack: Couldn't load memtrack module
+01-30 13:06:18.518  1961  1988 W android.os.Debug: failed to get memory consumption info: -1
+01-30 13:06:18.529  1961  1988 E memtrack: Couldn't load memtrack module
+01-30 13:06:18.529  1961  1988 W android.os.Debug: failed to get memory consumption info: -1
+01-30 13:06:18.540  1961  1988 E memtrack: Couldn't load memtrack module
+01-30 13:06:18.540  1961  1988 W android.os.Debug: failed to get memory consumption info: -1
+01-30 13:06:19.389  1961  1961 W Telecom : Logging: Stale Sessions Cleaned:
+01-30 13:06:19.389  1961  1961 W Telecom : CM.CCCR@ADg
+01-30 13:06:19.389  1961  1961 W Telecom : 	CM.CCCR->CM.UECNT@ADg
+01-30 13:06:19.389  1961  1961 W Telecom : 		CM.CCCR->CM.UECNT@ADg
+01-30 13:06:19.389  1961  1961 W Telecom : 			CM.CCCR->CM.UECNT->CM.CCCR->CM.UECNT@ADg
+01-30 13:06:19.668  1961  1988 E memtrack: Couldn't load memtrack module
+01-30 13:06:19.668  1961  1988 W android.os.Debug: failed to get memory consumption info: -1
+01-30 13:06:19.674  1961  1988 E memtrack: Couldn't load memtrack module
+01-30 13:06:19.674  1961  1988 W android.os.Debug: failed to get memory consumption info: -1
+01-30 13:06:21.605  1961  1988 E memtrack: Couldn't load memtrack module
+01-30 13:06:21.605  1961  1988 W android.os.Debug: failed to get memory consumption info: -1
+01-30 13:06:21.724  1961  2001 W PackageParser: Unknown element under <manifest>: meta-data at /data/app/vmdl953005106.tmp/base.apk Binary XML file line #11
+01-30 13:06:21.740  1961  2001 I PackageManager: Un-granting permission android.permission.MANAGE_DOCUMENTS from package com.google.android.youtube (protectionLevel=262146 flags=0x30dbbe45)
+01-30 13:06:21.742  1961  2001 I PackageManager: Un-granting permission com.google.android.googleapps.permission.GOOGLE_AUTH from package com.android.providers.calendar (protectionLevel=2 flags=0x30883e45)
+01-30 13:06:21.742  1961  2001 I PackageManager: Un-granting permission com.google.android.googleapps.permission.GOOGLE_AUTH.cl from package com.android.providers.calendar (protectionLevel=2 flags=0x30883e45)
+01-30 13:06:21.742  1961  2001 I PackageManager: Un-granting permission android.permission.WRITE_SECURE_SETTINGS from package com.google.android.apps.enterprise.dmagent (protectionLevel=50 flags=0x30083e05)
+01-30 13:06:21.742  1961  2001 I PackageManager: Un-granting permission android.permission.CONNECTIVITY_INTERNAL from package com.google.android.apps.enterprise.dmagent (protectionLevel=18 flags=0x30083e05)
+01-30 13:06:21.743  1961  2001 I PackageManager: Un-granting permission android.permission.MANAGE_USB from package com.google.android.apps.enterprise.dmagent (protectionLevel=18 flags=0x30083e05)
+01-30 13:06:21.743  1961  2001 I PackageManager: Un-granting permission android.permission.CHANGE_COMPONENT_ENABLED_STATE from package com.google.android.apps.enterprise.dmagent (protectionLevel=18 flags=0x30083e05)
+01-30 13:06:21.743  1961  2001 I PackageManager: Un-granting permission android.permission.MANAGE_CA_CERTIFICATES from package com.google.android.apps.enterprise.dmagent (protectionLevel=18 flags=0x30083e05)
+01-30 13:06:21.743  1961  2001 I PackageManager: Un-granting permission android.permission.MANAGE_USERS from package com.google.android.apps.enterprise.dmagent (protectionLevel=18 flags=0x30083e05)
+01-30 13:06:21.744  1961  2001 I PackageManager: Un-granting permission com.google.android.setupwizard.READ_DEVICE_ORIGIN from package com.google.android.apps.messaging (protectionLevel=18 flags=0x38cbbe45)
+01-30 13:06:21.746  1961  2001 I PackageManager: Un-granting permission android.permission.BIND_WALLPAPER from package com.android.camera2 (protectionLevel=18 flags=0x20d8bc45)
+01-30 13:06:21.747  1961  2001 I PackageManager: Un-granting permission android.permission.REQUEST_INSTALL_PACKAGES from package com.google.android.gm (protectionLevel=66 flags=0x38cbbe45)
+01-30 13:06:21.750  1961  2001 I PackageManager: Un-granting permission android.permission.BIND_JOB_SERVICE from package com.google.android.music (protectionLevel=2 flags=0x38cbbe65)
+01-30 13:06:21.750  1961  2001 I PackageManager: Un-granting permission android.permission.CONNECTIVITY_USE_RESTRICTED_NETWORKS from package com.google.android.captiveportallogin (protectionLevel=18 flags=0x38c8be45)
+01-30 13:06:21.750  1961  2001 I PackageManager: Un-granting permission android.permission.NETWORK_BYPASS_PRIVATE_DNS from package com.google.android.captiveportallogin (protectionLevel=2 flags=0x38c8be45)
+01-30 13:06:21.751  1961  2001 I PackageManager: Un-granting permission android.permission.REQUEST_INSTALL_PACKAGES from package com.google.android.apps.docs (protectionLevel=66 flags=0x38cbbe45)
+01-30 13:06:21.752  1961  2001 I PackageManager: Un-granting permission android.permission.INTERACT_ACROSS_USERS from package com.google.android.syncadapters.contacts (protectionLevel=50 flags=0x20883e45)
+01-30 13:06:21.753  1961  2001 I PackageManager: Un-granting permission android.permission.REQUEST_INSTALL_PACKAGES from package com.android.chrome (protectionLevel=66 flags=0xa0cbbe45)
+01-30 13:06:21.754  1961  2001 I PackageManager: Un-granting permission com.google.android.apps.now.CURRENT_ACCOUNT_ACCESS from package com.android.chrome (protectionLevel=2 flags=0xa0cbbe45)
+01-30 13:06:21.754  1961  2001 I PackageManager: Un-granting permission android.permission.CAPTURE_VIDEO_OUTPUT from package com.google.android.gms (protectionLevel=2 flags=0xb0cabe45)
+01-30 13:06:21.754  1961  2001 I PackageManager: Un-granting permission android.permission.MANAGE_DEVICE_ADMINS from package com.google.android.gms (protectionLevel=2 flags=0xb0cabe45)
+01-30 13:06:21.755  1961  2001 I PackageManager: Un-granting permission android.permission.MANAGE_ACTIVITY_STACKS from package com.google.android.gms (protectionLevel=2 flags=0xb0cabe45)
+01-30 13:06:21.755  1961  2001 I PackageManager: Un-granting permission android.permission.CAPTURE_SECURE_VIDEO_OUTPUT from package com.google.android.gms (protectionLevel=2 flags=0xb0cabe45)
+01-30 13:06:21.755  1961  2001 I PackageManager: Un-granting permission android.permission.MANAGE_ROLLBACKS from package com.google.android.gms (protectionLevel=514 flags=0xb0cabe45)
+01-30 13:06:21.756  1961  2001 I PackageManager: Un-granting permission com.google.android.googleapps.permission.GOOGLE_AUTH from package com.google.android.videos (protectionLevel=2 flags=0x30dbbe45)
+01-30 13:06:21.757  1961  2001 I PackageManager: Un-granting permission android.permission.WRITE_MEDIA_STORAGE from package com.google.android.apps.photos (protectionLevel=18 flags=0x38d9be45)
+01-30 13:06:21.840  1961  2001 D PackageManager: Instant App installer not found with android.intent.action.INSTALL_INSTANT_APP_PACKAGE
+01-30 13:06:21.840  1961  2001 D PackageManager: Clear ephemeral installer activity
+01-30 13:06:21.875  1961  2001 V BackupManagerService: restoreAtInstall pkg=com.dell.sped token=1 restoreSet=0
+01-30 13:06:21.876  1961  2001 V BackupManagerService: Finishing install immediately
+01-30 13:06:21.885  1616  1624 D vold    : Remounting 10133 as mode default
+01-30 13:06:21.916  1961  1988 E memtrack: Couldn't load memtrack module
+01-30 13:06:21.916  1961  1988 W android.os.Debug: failed to get memory consumption info: -1
+01-30 13:06:21.934  1705  1897 I netd    : trafficSetNetPermForUids(4, [10133]) <0.12ms>
+01-30 13:06:21.937  4241  5165 E BackupHelper: Could not parse delayed permissions
+01-30 13:06:21.937  4241  5165 E BackupHelper: java.io.FileNotFoundException: /data/user_de/0/com.google.android.permissioncontroller/files/delayed_restore_permissions.xml: open failed: ENOENT (No such file or directory)
+01-30 13:06:21.937  4241  5165 E BackupHelper: 	at libcore.io.IoBridge.open(IoBridge.java:496)
+01-30 13:06:21.937  4241  5165 E BackupHelper: 	at java.io.FileInputStream.<init>(FileInputStream.java:159)
+01-30 13:06:21.937  4241  5165 E BackupHelper: 	at android.app.ContextImpl.openFileInput(ContextImpl.java:600)
+01-30 13:06:21.937  4241  5165 E BackupHelper: 	at com.android.packageinstaller.permission.service.BackupHelper.restoreDelayedState(BackupHelper.java:338)
+01-30 13:06:21.937  4241  5165 E BackupHelper: 	at com.android.packageinstaller.permission.service.PermissionControllerServiceImpl.onRestoreDelayedRuntimePermissionsBackup(PermissionControllerServiceImpl.java:358)
+01-30 13:06:21.937  4241  5165 E BackupHelper: 	at com.android.packageinstaller.permission.service.PermissionControllerServiceImpl.lambda$onRestoreDelayedRuntimePermissionsBackup$3$PermissionControllerServiceImpl(PermissionControllerServiceImpl.java:352)
+01-30 13:06:21.937  4241  5165 E BackupHelper: 	at com.android.packageinstaller.permission.service.-$$Lambda$PermissionControllerServiceImpl$wHAhob5PsX8wKMTaFp8IJWkb1LE.run(Unknown Source:8)
+01-30 13:06:21.937  4241  5165 E BackupHelper: 	at android.os.AsyncTask$SerialExecutor$1.run(AsyncTask.java:289)
+01-30 13:06:21.937  4241  5165 E BackupHelper: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)
+01-30 13:06:21.937  4241  5165 E BackupHelper: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641)
+01-30 13:06:21.937  4241  5165 E BackupHelper: 	at java.lang.Thread.run(Thread.java:919)
+01-30 13:06:21.937  4241  5165 E BackupHelper: Caused by: android.system.ErrnoException: open failed: ENOENT (No such file or directory)
+01-30 13:06:21.937  4241  5165 E BackupHelper: 	at libcore.io.Linux.open(Native Method)
+01-30 13:06:21.937  4241  5165 E BackupHelper: 	at libcore.io.ForwardingOs.open(ForwardingOs.java:167)
+01-30 13:06:21.937  4241  5165 E BackupHelper: 	at libcore.io.BlockGuardOs.open(BlockGuardOs.java:252)
+01-30 13:06:21.937  4241  5165 E BackupHelper: 	at libcore.io.ForwardingOs.open(ForwardingOs.java:167)
+01-30 13:06:21.937  4241  5165 E BackupHelper: 	at android.app.ActivityThread$AndroidOs.open(ActivityThread.java:7255)
+01-30 13:06:21.937  4241  5165 E BackupHelper: 	at libcore.io.IoBridge.open(IoBridge.java:482)
+01-30 13:06:21.937  4241  5165 E BackupHelper: 	... 10 more
+01-30 13:06:21.946  1794  2018 E         : Couldn't opendir /data/app/vmdl953005106.tmp: No such file or directory
+01-30 13:06:21.946  1794  2018 E installd: Failed to delete /data/app/vmdl953005106.tmp: No such file or directory
+01-30 13:06:21.972  1961  1961 I RoleManagerService: Granting default permissions...
+01-30 13:06:22.007  1961  3346 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.PACKAGE_ADDED dat=package:com.dell.sped flg=0x4000010 (has extras) } to com.google.android.packageinstaller/com.android.packageinstaller.PackageInstalledReceiver
+01-30 13:06:22.009  2398  2949 E ActivityThread: Failed to find provider info for com.google.android.apps.wellbeing.api
+01-30 13:06:22.033  1961  1989 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.PACKAGE_ADDED dat=package:com.dell.sped flg=0x4000010 (has extras) } to com.android.musicfx/.Compatibility$Receiver
+01-30 13:06:22.040  1961  1989 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.PACKAGE_ADDED dat=package:com.dell.sped flg=0x4000010 (has extras) } to com.google.android.gms/.games.chimera.GamesSystemBroadcastReceiverProxy
+01-30 13:06:22.040  1961  1989 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.PACKAGE_ADDED dat=package:com.dell.sped flg=0x4000010 (has extras) } to com.google.android.gms/.gass.chimera.PackageChangeBroadcastReceiver
+01-30 13:06:22.041  1961  1989 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.PACKAGE_ADDED dat=package:com.dell.sped flg=0x4000010 (has extras) } to com.google.android.gms/.chimera.GmsIntentOperationService$PersistentTrustedReceiver
+01-30 13:06:22.041  1961  1989 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.PACKAGE_ADDED dat=package:com.dell.sped flg=0x4000010 (has extras) } to com.google.android.googlequicksearchbox/com.google.android.apps.gsa.googlequicksearchbox.GelStubAppWatcher
+01-30 13:06:22.042  1961  1989 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.PACKAGE_ADDED dat=package:com.dell.sped flg=0x4000010 (has extras) } to com.google.android.ims/.receivers.RcsAutoStartReceiver
+01-30 13:06:22.051  1961  2060 I InputReader: Reconfiguring input devices.  changes=0x00000010
+01-30 13:06:22.056  1706  1706 D Zygote  : Forked child process 5170
+01-30 13:06:22.091  5170  5170 W ackageinstalle: Unexpected CPU variant for X86 using defaults: x86
+01-30 13:06:22.123  2215  2215 D CarrierSvcBindHelper: No carrier app for: 0
+01-30 13:06:22.124  1961  1990 W ActivityManager: Slow operation: 76ms so far, now at startProcess: returned from zygote!
+01-30 13:06:22.125  1961  1990 W ActivityManager: Slow operation: 76ms so far, now at startProcess: done updating battery stats
+01-30 13:06:22.125  1961  1990 W ActivityManager: Slow operation: 77ms so far, now at startProcess: building log message
+01-30 13:06:22.125  1961  1990 I ActivityManager: Start proc 5170:com.google.android.packageinstaller/u0a53 for broadcast {com.google.android.packageinstaller/com.android.packageinstaller.PackageInstalledReceiver}
+01-30 13:06:22.125  1961  1990 W ActivityManager: Slow operation: 77ms so far, now at startProcess: starting to update pids map
+01-30 13:06:22.125  1961  1990 W ActivityManager: Slow operation: 77ms so far, now at startProcess: done updating pids map
+01-30 13:06:22.199  2215  2215 D CarrierConfigLoader: mHandler: 9 phoneId: 0
+01-30 13:06:22.209  1961  1961 W Looper  : Slow dispatch took 223ms main h=android.app.ActivityThread$H c=android.app.-$$Lambda$LoadedApk$ReceiverDispatcher$Args$_BumDX2UKsnxLVrE6UJsJZkotuA@52811fc m=0
+01-30 13:06:22.231  2490  5184 W GCM     : Unexpected forwarded intent: Intent { act=android.intent.action.PACKAGE_ADDED dat=package:com.dell.sped flg=0x4000010 cmp=com.google.android.gms/.chimera.PersistentIntentOperationService (has extras) }
+01-30 13:06:22.234  5170  5170 I ackageinstalle: The ClassLoaderContext is a special shared library.
+01-30 13:06:22.242  2490  5195 W GCM     : Unexpected forwarded intent: Intent { act=android.intent.action.PACKAGE_ADDED dat=package:com.dell.sped flg=0x4000010 cmp=com.google.android.gms/.chimera.PersistentIntentOperationService (has extras) }
+01-30 13:06:22.278  2651  5201 I Auth    : [SupervisedAccountIntentOperation] onHandleIntent(): android.intent.action.PACKAGE_ADDED
+01-30 13:06:22.321  2651  5201 I ChromeSync: [Sync,SyncIntentOperation] Handling the intent: Intent { act=android.intent.action.PACKAGE_ADDED dat=package:com.dell.sped flg=0x4000010 cmp=com.google.android.gms/.chimera.GmsIntentOperationService (has extras) }.
+01-30 13:06:22.362  1961  2738 D WificondControl: Scan result ready event
+01-30 13:06:22.507  1705  1897 I netd    : firewallSetUidRule(2, 10133, 2) <2.01ms>
+01-30 13:06:22.563  1961  2066 W system_server: Long monitor contention with owner NetworkPolicy (2065) at void com.android.server.net.NetworkPolicyManagerService$6.onReceive(android.content.Context, android.content.Intent)(NetworkPolicyManagerService.java:955) waiters=0 in void com.android.server.net.NetworkPolicyManagerService.handleUidChanged(int, int, long) for 315ms
+01-30 13:06:22.646  1961  1972 I system_server: Background concurrent copying GC freed 60960(3514KB) AllocSpace objects, 19(1280KB) LOS objects, 33% free, 11MB/17MB, paused 444us total 708.513ms
+01-30 13:06:22.701  2651  5192 I ChimeraConfigurator: Starting update, reason: 4 urgentFeatures: pay:-1
+01-30 13:06:22.703  2651  5192 E ConfigFileUtils: Failed to read config file: /data/user_de/0/com.google.android.gms/app_chimera/next_container.pb: open failed: ENOENT (No such file or directory)
+01-30 13:06:22.775  1961  1961 W system_server: Long monitor contention with owner android.bg (1988) at android.content.res.Resources android.app.ResourcesManager.getOrCreateResources(android.os.IBinder, android.content.res.ResourcesKey, java.lang.ClassLoader)(ResourcesManager.java:762) waiters=0 in android.content.res.Resources android.app.ResourcesManager.getOrCreateResources(android.os.IBinder, android.content.res.ResourcesKey, java.lang.ClassLoader) for 309ms
+01-30 13:06:22.786  1961  1961 W Looper  : Slow delivery took 238ms main h=android.app.ActivityThread$H c=android.app.-$$Lambda$LoadedApk$ReceiverDispatcher$Args$_BumDX2UKsnxLVrE6UJsJZkotuA@325ef78 m=0
+01-30 13:06:22.786  1961  1961 W Looper  : Slow dispatch took 576ms main h=android.app.ActivityThread$H c=android.app.-$$Lambda$LoadedApk$ReceiverDispatcher$Args$_BumDX2UKsnxLVrE6UJsJZkotuA@325ef78 m=0
+01-30 13:06:22.943  2651  5201 I ChromeSync: [Persistence,AffiliationManager] One of affiliation or grouping data for android://Wbta8afmUzvDwjSh56QdmLsXqd_D3knlnIpvFtQzQi7bPpU5YlYzfKBHp2Faqqy-2spZWlblah2QQDQ3xmuxsw==@com.dell.sped/ was not found. Marking affiliation data as stale...
+01-30 13:06:22.952  2651  2664 I gle.android.gm: Background young concurrent copying GC freed 70039(3978KB) AllocSpace objects, 32(1472KB) LOS objects, 28% free, 9870KB/13MB, paused 1.508ms total 428.489ms
+01-30 13:06:23.085  2651  5192 I ChmraDebugLogger: [73] 1801
+01-30 13:06:23.128  1961  2001 I PackageParser: Parse times for '/data/app/vmdl1714405775.tmp': parse=245ms, update_cache=0 ms
+01-30 13:06:23.134  2651  5192 I ChmraDebugLogger: [30] [Pay.optional:202414020000] permitMetered=true,
+01-30 13:06:23.146  2651  5192 W ChimeraConfigService: Retry attempt was throttled.
+01-30 13:06:23.146  2651  5192 I ChimeraConfigurator: Update complete: success
+01-30 13:06:23.193  3416  3518 I MicroDetectionWorker: #startMicroDetector [speakerMode: 0]
+01-30 13:06:23.203  3416  3518 W ErrorReporter: reportError [type: 211, code: 393244, bug: 0]: errorCode: 393244, engine: 0
+01-30 13:06:23.208  3416  3518 I MicroDetector: Keeping mic open: false
+01-30 13:06:23.208  3416  3518 I MicroDetectionWorker: #onError(false)
+01-30 13:06:23.239  1961  2001 I PackageManager: Un-granting permission android.permission.MANAGE_DOCUMENTS from package com.google.android.youtube (protectionLevel=262146 flags=0x30dbbe45)
+01-30 13:06:23.273  1961  2001 I PackageManager: Un-granting permission com.google.android.googleapps.permission.GOOGLE_AUTH from package com.android.providers.calendar (protectionLevel=2 flags=0x30883e45)
+01-30 13:06:23.273  1961  2001 I PackageManager: Un-granting permission com.google.android.googleapps.permission.GOOGLE_AUTH.cl from package com.android.providers.calendar (protectionLevel=2 flags=0x30883e45)
+01-30 13:06:23.274  1961  2001 I PackageManager: Un-granting permission android.permission.WRITE_SECURE_SETTINGS from package com.google.android.apps.enterprise.dmagent (protectionLevel=50 flags=0x30083e05)
+01-30 13:06:23.274  1961  2001 I PackageManager: Un-granting permission android.permission.CONNECTIVITY_INTERNAL from package com.google.android.apps.enterprise.dmagent (protectionLevel=18 flags=0x30083e05)
+01-30 13:06:23.274  1961  2001 I PackageManager: Un-granting permission android.permission.MANAGE_USB from package com.google.android.apps.enterprise.dmagent (protectionLevel=18 flags=0x30083e05)
+01-30 13:06:23.274  1961  2001 I PackageManager: Un-granting permission android.permission.CHANGE_COMPONENT_ENABLED_STATE from package com.google.android.apps.enterprise.dmagent (protectionLevel=18 flags=0x30083e05)
+01-30 13:06:23.274  1961  2001 I PackageManager: Un-granting permission android.permission.MANAGE_CA_CERTIFICATES from package com.google.android.apps.enterprise.dmagent (protectionLevel=18 flags=0x30083e05)
+01-30 13:06:23.274  1961  2001 I PackageManager: Un-granting permission android.permission.MANAGE_USERS from package com.google.android.apps.enterprise.dmagent (protectionLevel=18 flags=0x30083e05)
+01-30 13:06:23.275  1961  2001 I PackageManager: Un-granting permission com.google.android.setupwizard.READ_DEVICE_ORIGIN from package com.google.android.apps.messaging (protectionLevel=18 flags=0x38cbbe45)
+01-30 13:06:23.276  1961  2001 I PackageManager: Un-granting permission android.permission.BIND_WALLPAPER from package com.android.camera2 (protectionLevel=18 flags=0x20d8bc45)
+01-30 13:06:23.277  1961  2001 I PackageManager: Un-granting permission android.permission.REQUEST_INSTALL_PACKAGES from package com.google.android.gm (protectionLevel=66 flags=0x38cbbe45)
+01-30 13:06:23.278  1961  2001 I PackageManager: Un-granting permission android.permission.BIND_JOB_SERVICE from package com.google.android.music (protectionLevel=2 flags=0x38cbbe65)
+01-30 13:06:23.278  1961  2001 I PackageManager: Un-granting permission android.permission.CONNECTIVITY_USE_RESTRICTED_NETWORKS from package com.google.android.captiveportallogin (protectionLevel=18 flags=0x38c8be45)
+01-30 13:06:23.278  1961  2001 I PackageManager: Un-granting permission android.permission.NETWORK_BYPASS_PRIVATE_DNS from package com.google.android.captiveportallogin (protectionLevel=2 flags=0x38c8be45)
+01-30 13:06:23.278  1961  2001 I PackageManager: Un-granting permission android.permission.REQUEST_INSTALL_PACKAGES from package com.google.android.apps.docs (protectionLevel=66 flags=0x38cbbe45)
+01-30 13:06:23.279  1961  2001 I PackageManager: Un-granting permission android.permission.INTERACT_ACROSS_USERS from package com.google.android.syncadapters.contacts (protectionLevel=50 flags=0x20883e45)
+01-30 13:06:23.283  1961  2001 I PackageManager: Un-granting permission android.permission.REQUEST_INSTALL_PACKAGES from package com.android.chrome (protectionLevel=66 flags=0xa0cbbe45)
+01-30 13:06:23.283  1961  2001 I PackageManager: Un-granting permission com.google.android.apps.now.CURRENT_ACCOUNT_ACCESS from package com.android.chrome (protectionLevel=2 flags=0xa0cbbe45)
+01-30 13:06:23.283  1961  2001 I PackageManager: Un-granting permission android.permission.CAPTURE_VIDEO_OUTPUT from package com.google.android.gms (protectionLevel=2 flags=0xb0cabe45)
+01-30 13:06:23.283  1961  2001 I PackageManager: Un-granting permission android.permission.MANAGE_DEVICE_ADMINS from package com.google.android.gms (protectionLevel=2 flags=0xb0cabe45)
+01-30 13:06:23.283  1961  2001 I PackageManager: Un-granting permission android.permission.MANAGE_ACTIVITY_STACKS from package com.google.android.gms (protectionLevel=2 flags=0xb0cabe45)
+01-30 13:06:23.283  1961  2001 I PackageManager: Un-granting permission android.permission.CAPTURE_SECURE_VIDEO_OUTPUT from package com.google.android.gms (protectionLevel=2 flags=0xb0cabe45)
+01-30 13:06:23.283  1961  2001 I PackageManager: Un-granting permission android.permission.MANAGE_ROLLBACKS from package com.google.android.gms (protectionLevel=514 flags=0xb0cabe45)
+01-30 13:06:23.284  1961  2001 I PackageManager: Un-granting permission com.google.android.googleapps.permission.GOOGLE_AUTH from package com.google.android.videos (protectionLevel=2 flags=0x30dbbe45)
+01-30 13:06:23.284  1961  2001 I PackageManager: Un-granting permission android.permission.WRITE_MEDIA_STORAGE from package com.google.android.apps.photos (protectionLevel=18 flags=0x38d9be45)
+01-30 13:06:23.322  1961  1961 W system_server: Long monitor contention with owner android.bg (1988) at android.content.res.Resources android.app.ResourcesManager.getOrCreateResources(android.os.IBinder, android.content.res.ResourcesKey, java.lang.ClassLoader)(ResourcesManager.java:762) waiters=0 in android.content.res.Resources android.app.ResourcesManager.getOrCreateResources(android.os.IBinder, android.content.res.ResourcesKey, java.lang.ClassLoader) for 406ms
+01-30 13:06:23.341  1961  1961 W Looper  : Slow dispatch took 526ms main h=android.app.ActivityThread$H c=android.app.-$$Lambda$LoadedApk$ReceiverDispatcher$Args$_BumDX2UKsnxLVrE6UJsJZkotuA@a56abc3 m=0
+01-30 13:06:23.365  1961  2001 D PackageManager: Instant App installer not found with android.intent.action.INSTALL_INSTANT_APP_PACKAGE
+01-30 13:06:23.365  1961  2001 D PackageManager: Clear ephemeral installer activity
+01-30 13:06:23.366  1961  1961 I Telecom : DefaultDialerCache: Refreshing default dialer for user 0: now com.android.dialer: DDC.oR@AGA
+01-30 13:06:23.368  1961  1961 V BackupManagerConstants: getFullBackupIntervalMilliseconds(...) returns 86400000
+01-30 13:06:23.379  2651  5192 I GmsModuleFndr: Beginning GMS chimera module scan
+01-30 13:06:23.387  1961  1961 V BackupManagerConstants: getFullBackupRequiredNetworkType(...) returns 2
+01-30 13:06:23.387  1961  1961 V BackupManagerConstants: getFullBackupRequireCharging(...) returns true
+01-30 13:06:23.394  2651  5192 I ModuleSetMgr: Computing pending module set with APKs: [[AdsFdrDynamite.integ:21460000000], [Cronetdynamite:202414040700], [Dynamiteloader:202414040700], [Dynamitemodulesa:202414040000], [Dynamitemodulesc:202414040000], [Googlecertificates:202414040000], [Mapsdynamite:202414040000], [Measurementdynamite:202414040000]]
+01-30 13:06:23.403  1961  1961 W Looper  : Drained
+01-30 13:06:23.422  2651  5192 I ModuleSetMgr: Pending container module APKs: []
+01-30 13:06:23.422  2651  5192 I ModuleSetMgr: Pending non-container module APKs: []
+01-30 13:06:23.454  2651  3548 I Icing   : IndexChimeraService.getServiceInterface callingPackage=com.google.android.gms componentName=AppsCorpus serviceId=36
+01-30 13:06:23.454  1961  2001 V BackupManagerService: restoreAtInstall pkg=com.dell.sped.test token=2 restoreSet=0
+01-30 13:06:23.456  1961  2001 V BackupManagerService: Finishing install immediately
+01-30 13:06:23.472  1705  1897 I netd    : trafficSetNetPermForUids(0, [10134]) <0.07ms>
+01-30 13:06:23.488  1794  2018 E         : Couldn't opendir /data/app/vmdl1714405775.tmp: No such file or directory
+01-30 13:06:23.488  1794  2018 E installd: Failed to delete /data/app/vmdl1714405775.tmp: No such file or directory
+01-30 13:06:23.526  1961  1988 E memtrack: Couldn't load memtrack module
+01-30 13:06:23.526  1961  1988 W android.os.Debug: failed to get memory consumption info: -1
+01-30 13:06:23.556  1961  1961 I RoleManagerService: Granting default permissions...
+01-30 13:06:23.558  1961  1989 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.PACKAGE_ADDED dat=package:com.dell.sped.test flg=0x4000010 (has extras) } to com.google.android.packageinstaller/com.android.packageinstaller.PackageInstalledReceiver
+01-30 13:06:23.558  1961  1989 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.PACKAGE_ADDED dat=package:com.dell.sped.test flg=0x4000010 (has extras) } to com.android.musicfx/.Compatibility$Receiver
+01-30 13:06:23.558  1961  1989 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.PACKAGE_ADDED dat=package:com.dell.sped.test flg=0x4000010 (has extras) } to com.google.android.gms/.games.chimera.GamesSystemBroadcastReceiverProxy
+01-30 13:06:23.558  1961  1989 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.PACKAGE_ADDED dat=package:com.dell.sped.test flg=0x4000010 (has extras) } to com.google.android.gms/.gass.chimera.PackageChangeBroadcastReceiver
+01-30 13:06:23.559  1961  1989 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.PACKAGE_ADDED dat=package:com.dell.sped.test flg=0x4000010 (has extras) } to com.google.android.gms/.chimera.GmsIntentOperationService$PersistentTrustedReceiver
+01-30 13:06:23.559  1961  1989 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.PACKAGE_ADDED dat=package:com.dell.sped.test flg=0x4000010 (has extras) } to com.google.android.googlequicksearchbox/com.google.android.apps.gsa.googlequicksearchbox.GelStubAppWatcher
+01-30 13:06:23.559  1961  1989 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.PACKAGE_ADDED dat=package:com.dell.sped.test flg=0x4000010 (has extras) } to com.google.android.ims/.receivers.RcsAutoStartReceiver
+01-30 13:06:23.566  1961  2060 I InputReader: Reconfiguring input devices.  changes=0x00000010
+01-30 13:06:23.618  2490  5199 W GCM     : Unexpected forwarded intent: Intent { act=android.intent.action.PACKAGE_ADDED dat=package:com.dell.sped.test flg=0x4000010 cmp=com.google.android.gms/.chimera.PersistentIntentOperationService (has extras) }
+01-30 13:06:23.619  2490  5184 W GCM     : Unexpected forwarded intent: Intent { act=android.intent.action.PACKAGE_ADDED dat=package:com.dell.sped.test flg=0x4000010 cmp=com.google.android.gms/.chimera.PersistentIntentOperationService (has extras) }
+01-30 13:06:23.652  2651  5202 I Auth    : [SupervisedAccountIntentOperation] onHandleIntent(): android.intent.action.PACKAGE_ADDED
+01-30 13:06:23.654  2651  5150 I ChromeSync: [Sync,SyncIntentOperation] Handling the intent: Intent { act=android.intent.action.PACKAGE_ADDED dat=package:com.dell.sped.test flg=0x4000010 cmp=com.google.android.gms/.chimera.GmsIntentOperationService (has extras) }.
+01-30 13:06:23.656  2651  5202 I FontLog : Package com.dell.sped.test has no metadata [CONTEXT service_id=132 ]
+01-30 13:06:23.804  1961  1961 W Looper  : Slow dispatch took 248ms main h=android.app.ActivityThread$H c=android.app.-$$Lambda$LoadedApk$ReceiverDispatcher$Args$_BumDX2UKsnxLVrE6UJsJZkotuA@f3b78d5 m=0
+01-30 13:06:23.805  1961  1961 W Looper  : Slow delivery took 249ms main h=android.app.ActivityThread$H c=android.app.-$$Lambda$LoadedApk$ReceiverDispatcher$Args$_BumDX2UKsnxLVrE6UJsJZkotuA@dc749b6 m=0
+01-30 13:06:23.850  2215  2215 D CarrierSvcBindHelper: No carrier app for: 0
+01-30 13:06:23.860  1961  1961 I Telecom : DefaultDialerCache: Refreshing default dialer for user 0: now com.android.dialer: DDC.oR@AGE
+01-30 13:06:23.866  1961  1961 V BackupManagerConstants: getFullBackupIntervalMilliseconds(...) returns 86400000
+01-30 13:06:23.866  1961  1961 V BackupManagerConstants: getFullBackupRequiredNetworkType(...) returns 2
+01-30 13:06:23.866  1961  1961 V BackupManagerConstants: getFullBackupRequireCharging(...) returns true
+01-30 13:06:23.918  2651  5202 I ChimeraConfigurator: Starting update, reason: 4 urgentFeatures: pay:-1
+01-30 13:06:23.923  2651  5202 E ConfigFileUtils: Failed to read config file: /data/user_de/0/com.google.android.gms/app_chimera/next_container.pb: open failed: ENOENT (No such file or directory)
+01-30 13:06:23.950  2215  2215 D CarrierConfigLoader: mHandler: 9 phoneId: 0
+01-30 13:06:24.005  2651  3325 W Icing   : Failed to get Lockbox signed-in status: java.util.concurrent.TimeoutException: Timed out waiting for Task
+01-30 13:06:24.005  2651  3325 W Icing   : getSignedInAccountName: Falling back to default value
+01-30 13:06:24.062  2651  3325 W Icing   : No valid account for uploading user actions
+01-30 13:06:24.138  2651  5150 I ChromeSync: [Persistence,AffiliationManager] One of affiliation or grouping data for android://Wbta8afmUzvDwjSh56QdmLsXqd_D3knlnIpvFtQzQi7bPpU5YlYzfKBHp2Faqqy-2spZWlblah2QQDQ3xmuxsw==@com.dell.sped.test/ was not found. Marking affiliation data as stale...
+01-30 13:06:24.176  2651  5202 I ChmraDebugLogger: [73] 1801
+01-30 13:06:24.197  2651  5202 I ChmraDebugLogger: [30] [Pay.optional:202414020000] permitMetered=true,
+01-30 13:06:24.214  2651  5202 W ChimeraConfigService: Retry attempt was throttled.
+01-30 13:06:24.245  2490  2490 W .gms.persisten: Long monitor contention with owner GoogleApiHandler (2903) at boolean sdx.a(sdw, android.content.ServiceConnection, java.lang.String)(:com.google.android.gms@202414022@20.24.14 (040700-319035315):16) waiters=0 in void sdy.onServiceConnected(android.content.ComponentName, android.os.IBinder) for 114ms
+01-30 13:06:24.286  2651  2664 I gle.android.gm: Background young concurrent copying GC freed 50839(3091KB) AllocSpace objects, 27(1308KB) LOS objects, 25% free, 10182KB/13MB, paused 569us total 278.888ms
+01-30 13:06:24.425  2398  2949 E ActivityThread: Failed to find provider info for com.google.android.apps.wellbeing.api
+01-30 13:06:24.435  2651  3544 I Icing   : IndexChimeraService.getServiceInterface callingPackage=com.google.android.gms componentName=null serviceId=30
+01-30 13:06:24.442  1961  1972 I system_server: Background concurrent copying GC freed 59507(3578KB) AllocSpace objects, 22(1532KB) LOS objects, 33% free, 11MB/17MB, paused 2.297ms total 967.308ms
+01-30 13:06:24.551  5216  5216 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+01-30 13:06:24.574  5216  5216 E libc    : Access denied finding property "persist.device_config.runtime_native_boot.enable_apex_image"
+01-30 13:06:24.574  5216  5216 I AndroidRuntime: Using default boot image
+01-30 13:06:24.575  5216  5216 E libc    : Access denied finding property "persist.device_config.runtime_native_boot.disable_lock_profiling"
+01-30 13:06:24.575  5216  5216 I AndroidRuntime: Leaving lock profiling enabled
+01-30 13:06:24.575  5216  5216 E libc    : Access denied finding property "persist.device_config.runtime_native_boot.enable_generational_cc"
+01-30 13:06:24.581  5216  5216 W app_process: Could not reserve sentinel fault page
+01-30 13:06:24.582  5216  5216 I app_process: Core platform API reporting enabled, enforcing=false
+01-30 13:06:24.558  5216  5216 W app_process: type=1400 audit(0.0:23): avc: denied { read } for name="u:object_r:device_config_runtime_native_boot_prop:s0" dev="tmpfs" ino=6710 scontext=u:r:shell:s0 tcontext=u:object_r:device_config_runtime_native_boot_prop:s0 tclass=file permissive=0
+01-30 13:06:24.568  5216  5216 W app_process: type=1400 audit(0.0:24): avc: denied { read } for name="u:object_r:device_config_runtime_native_boot_prop:s0" dev="tmpfs" ino=6710 scontext=u:r:shell:s0 tcontext=u:object_r:device_config_runtime_native_boot_prop:s0 tclass=file permissive=0
+01-30 13:06:24.743  2651  3325 I Icing   : Usage reports ok 1, Failed Usage reports 0, indexed 0, rejected 0
+01-30 13:06:24.786  2651  3325 W Icing   : No valid account for uploading user actions
+01-30 13:06:24.803  1961  1988 I RoleUserState: Wrote roles.xml successfully
+01-30 13:06:24.822  2651  3325 I Icing   : Usage reports ok 0, Failed Usage reports 0, indexed 0, rejected 0
+01-30 13:06:24.835  2651  3325 I Icing   : Indexing com.google.android.gms-internal.3p:MobileApplication from com.google.android.gms using seqno 69
+01-30 13:06:24.905  2651  3325 I Icing   : Indexing com.google.android.gms-apps from com.google.android.gms
+01-30 13:06:25.093  5216  5216 D ICU     : Time zone APEX file found: /apex/com.android.tzdata/etc/icu/icu_tzdata.dat
+01-30 13:06:25.113  5216  5216 W app_process: Unexpected CPU variant for X86 using defaults: x86
+01-30 13:06:25.122  5216  5216 I app_process: The ClassLoaderContext is a special shared library.
+01-30 13:06:25.128  2651  3325 I Icing   : Indexing done com.google.android.gms-apps
+01-30 13:06:25.153  5216  5216 W app_process: JNI RegisterNativeMethods: attempt to register 0 native methods for android.media.AudioAttributes
+01-30 13:06:25.158  5216  5216 D AndroidRuntime: Calling main entry com.android.commands.am.Am
+01-30 13:06:25.165  1961  1976 I ActivityManager: Force stopping com.dell.sped appid=10133 user=0: start instr
+01-30 13:06:25.167  1961  1961 W Looper  : Drained
+01-30 13:06:25.177  1706  1706 D Zygote  : Forked child process 5239
+01-30 13:06:25.179  5239  5239 I com.dell.sped: Not late-enabling -Xcheck:jni (already on)
+01-30 13:06:25.203  1961  1990 I ActivityManager: Start proc 5239:com.dell.sped/u0a133 for added application com.dell.sped
+01-30 13:06:25.204  5239  5239 E com.dell.sped: Unknown bits set in runtime_flags: 0x8000
+01-30 13:06:25.205  5239  5239 W com.dell.sped: Unexpected CPU variant for X86 using defaults: x86
+01-30 13:06:25.303  5239  5239 I com.dell.sped: The ClassLoaderContext is a special shared library.
+01-30 13:06:25.315  5239  5239 I chatty  : uid=10133(com.dell.sped) identical 1 line
+01-30 13:06:25.321  5239  5239 I com.dell.sped: The ClassLoaderContext is a special shared library.
+01-30 13:06:25.460  1705  1897 I netd    : firewallSetUidRule(2, 10133, 1) <0.03ms>
+01-30 13:06:25.529  5239  5239 I com.dell.sped: The ClassLoaderContext is a special shared library.
+01-30 13:06:25.655  1961  1988 I RoleUserState: Wrote roles.xml successfully
+01-30 13:06:25.530  5239  5239 I com.dell.sped: The ClassLoaderContext is a special shared library.
+01-30 13:06:25.674  5239  5239 W com.dell.sped: Accessing hidden method Landroid/app/Instrumentation;->execStartActivity(Landroid/content/Context;Landroid/os/IBinder;Landroid/os/IBinder;Landroid/app/Activity;Landroid/content/Intent;ILandroid/os/Bundle;)Landroid/app/Instrumentation$ActivityResult; (greylist, linking, allowed)
+01-30 13:06:25.674  5239  5239 W com.dell.sped: Accessing hidden method Landroid/app/Instrumentation;->execStartActivity(Landroid/content/Context;Landroid/os/IBinder;Landroid/os/IBinder;Ljava/lang/String;Landroid/content/Intent;ILandroid/os/Bundle;)Landroid/app/Instrumentation$ActivityResult; (greylist, linking, allowed)
+01-30 13:06:25.793  5239  5239 D FirebaseApp: com.google.firebase.crash.FirebaseCrash is not linked. Skipping initialization.
+01-30 13:06:25.830  5239  5239 I FA      : App measurement is starting up, version: 11020
+01-30 13:06:25.830  5239  5239 I FA      : To enable debug logging run: adb shell setprop log.tag.FA VERBOSE
+01-30 13:06:25.861  5239  5239 I FA      : To enable faster debug mode event logging run:
+01-30 13:06:25.861  5239  5239 I FA      :   adb shell setprop debug.firebase.analytics.app com.dell.sped
+01-30 13:06:25.887  5239  5258 W DynamiteModule: Local module descriptor class for com.google.firebase.auth not found.
+01-30 13:06:25.902  5239  5258 W DynamiteModule: Local module descriptor class for com.google.firebase.auth not found.
+01-30 13:06:25.909  5239  5239 I FirebaseInitProvider: FirebaseApp initialization successful
+01-30 13:06:25.924  5239  5258 W com.dell.sped: Unsupported class loader
+01-30 13:06:25.942  5239  5239 I MonitoringInstr: Instrumentation started!
+01-30 13:06:25.945  5239  5239 I MonitoringInstr: Setting context classloader to 'dalvik.system.PathClassLoader[DexPathList[[zip file "/system/framework/android.test.runner.jar", zip file "/system/framework/android.test.mock.jar", zip file "/data/app/com.dell.sped.test-_I3gqVCXL9nQdY5K_6Kp7g==/base.apk", zip file "/data/app/com.dell.sped-LKXATudAfMlKtbEos2LeAQ==/base.apk"],nativeLibraryDirectories=[/data/app/com.dell.sped.test-_I3gqVCXL9nQdY5K_6Kp7g==/lib/x86, /data/app/com.dell.sped-LKXATudAfMlKtbEos2LeAQ==/lib/x86, /system/lib, /system/product/lib]]]', Original: 'dalvik.system.PathClassLoader[DexPathList[[zip file "/system/framework/android.test.runner.jar", zip file "/system/framework/android.test.mock.jar", zip file "/data/app/com.dell.sped.test-_I3gqVCXL9nQdY5K_6Kp7g==/base.apk", zip file "/data/app/com.dell.sped-LKXATudAfMlKtbEos2LeAQ==/base.apk"],nativeLibraryDirectories=[/data/app/com.dell.sped.test-_I3gqVCXL9nQdY5K_6Kp7g==/lib/x86, /data/app/com.dell.sped-LKXATudAfMlKtbEos2LeAQ==/lib/x86, /system/lib, /system/product/lib]]]'
+01-30 13:06:25.985  5239  5239 I MonitoringInstr: No JSBridge.
+01-30 13:06:26.007  5239  5264 I MonitoringInstr: Setting context classloader to 'dalvik.system.PathClassLoader[DexPathList[[zip file "/system/framework/android.test.runner.jar", zip file "/system/framework/android.test.mock.jar", zip file "/data/app/com.dell.sped.test-_I3gqVCXL9nQdY5K_6Kp7g==/base.apk", zip file "/data/app/com.dell.sped-LKXATudAfMlKtbEos2LeAQ==/base.apk"],nativeLibraryDirectories=[/data/app/com.dell.sped.test-_I3gqVCXL9nQdY5K_6Kp7g==/lib/x86, /data/app/com.dell.sped-LKXATudAfMlKtbEos2LeAQ==/lib/x86, /system/lib, /system/product/lib]]]', Original: 'dalvik.system.PathClassLoader[DexPathList[[zip file "/system/framework/android.test.runner.jar", zip file "/system/framework/android.test.mock.jar", zip file "/data/app/com.dell.sped.test-_I3gqVCXL9nQdY5K_6Kp7g==/base.apk", zip file "/data/app/com.dell.sped-LKXATudAfMlKtbEos2LeAQ==/base.apk"],nativeLibraryDirectories=[/data/app/com.dell.sped.test-_I3gqVCXL9nQdY5K_6Kp7g==/lib/x86, /data/app/com.dell.sped-LKXATudAfMlKtbEos2LeAQ==/lib/x86, /system/lib, /system/product/lib]]]'
+01-30 13:06:26.038  5239  5264 I UsageTrackerFacilitator: Usage tracking enabled
+01-30 13:06:26.045  5239  5264 I TestRequestBuilder: Scanning classpath to find tests in paths [/data/app/com.dell.sped.test-_I3gqVCXL9nQdY5K_6Kp7g==/base.apk]
+01-30 13:06:26.046  5239  5264 W com.dell.sped: Opening an oat file without a class loader. Are you using the deprecated DexFile APIs?
+01-30 13:06:26.255  5239  5264 D TestExecutor: Adding listener androidx.test.internal.runner.listener.LogRunListener
+01-30 13:06:26.255  5239  5264 D TestExecutor: Adding listener androidx.test.internal.runner.listener.InstrumentationResultPrinter
+01-30 13:06:26.255  5239  5264 D TestExecutor: Adding listener androidx.test.internal.runner.listener.ActivityFinisherRunListener
+01-30 13:06:26.256  5239  5264 I TestRunner: run started: 1 tests
+01-30 13:06:26.258  5239  5264 I TestRunner: started: useAppContext(com.dell.sped.ExampleInstrumentedTest)
+01-30 13:06:26.262  5239  5239 I MonitoringInstr: Activities that are still in CREATED to STOPPED: 0
+01-30 13:06:26.262  5239  5264 I TestRunner: finished: useAppContext(com.dell.sped.ExampleInstrumentedTest)
+01-30 13:06:26.267  5239  5239 I MonitoringInstr: Activities that are still in CREATED to STOPPED: 0
+01-30 13:06:26.268  5239  5264 I TestRunner: run finished: 1 tests, 0 failed, 0 ignored
+01-30 13:06:26.286  5239  5264 D NetworkSecurityConfig: No Network Security Config specified, using platform default
+01-30 13:06:26.732  1705  5269 E ResolverController: No valid NAT64 prefix (101, <unspecified>/0)
+01-30 13:06:26.737  5239  5264 W InfraTrack: Analytics post: AndroidJUnitRunner=1.1.0 failed. 
+01-30 13:06:26.737  5239  5264 W InfraTrack: java.net.ConnectException: Failed to connect to www.google-analytics.com/:::443
+01-30 13:06:26.737  5239  5264 W InfraTrack: 	at com.android.okhttp.internal.io.RealConnection.connectSocket(RealConnection.java:147)
+01-30 13:06:26.737  5239  5264 W InfraTrack: 	at com.android.okhttp.internal.io.RealConnection.connect(RealConnection.java:116)
+01-30 13:06:26.737  5239  5264 W InfraTrack: 	at com.android.okhttp.internal.http.StreamAllocation.findConnection(StreamAllocation.java:186)
+01-30 13:06:26.737  5239  5264 W InfraTrack: 	at com.android.okhttp.internal.http.StreamAllocation.findHealthyConnection(StreamAllocation.java:128)
+01-30 13:06:26.737  5239  5264 W InfraTrack: 	at com.android.okhttp.internal.http.StreamAllocation.newStream(StreamAllocation.java:97)
+01-30 13:06:26.737  5239  5264 W InfraTrack: 	at com.android.okhttp.internal.http.HttpEngine.connect(HttpEngine.java:289)
+01-30 13:06:26.737  5239  5264 W InfraTrack: 	at com.android.okhttp.internal.http.HttpEngine.sendRequest(HttpEngine.java:232)
+01-30 13:06:26.737  5239  5264 W InfraTrack: 	at com.android.okhttp.internal.huc.HttpURLConnectionImpl.execute(HttpURLConnectionImpl.java:465)
+01-30 13:06:26.737  5239  5264 W InfraTrack: 	at com.android.okhttp.internal.huc.HttpURLConnectionImpl.connect(HttpURLConnectionImpl.java:131)
+01-30 13:06:26.737  5239  5264 W InfraTrack: 	at com.android.okhttp.internal.huc.HttpURLConnectionImpl.getOutputStream(HttpURLConnectionImpl.java:262)
+01-30 13:06:26.737  5239  5264 W InfraTrack: 	at com.android.okhttp.internal.huc.DelegatingHttpsURLConnection.getOutputStream(DelegatingHttpsURLConnection.java:219)
+01-30 13:06:26.737  5239  5264 W InfraTrack: 	at com.android.okhttp.internal.huc.HttpsURLConnectionImpl.getOutputStream(HttpsURLConnectionImpl.java:30)
+01-30 13:06:26.737  5239  5264 W InfraTrack: 	at androidx.test.internal.runner.tracker.AnalyticsBasedUsageTracker.sendUsages(AnalyticsBasedUsageTracker.java:277)
+01-30 13:06:26.737  5239  5264 W InfraTrack: 	at androidx.test.runner.UsageTrackerFacilitator.sendUsages(UsageTrackerFacilitator.java:80)
+01-30 13:06:26.737  5239  5264 W InfraTrack: 	at androidx.test.runner.AndroidJUnitRunner.finish(AndroidJUnitRunner.java:404)
+01-30 13:06:26.737  5239  5264 W InfraTrack: 	at androidx.test.runner.AndroidJUnitRunner.onStart(AndroidJUnitRunner.java:397)
+01-30 13:06:26.737  5239  5264 W InfraTrack: 	at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:2189)
+01-30 13:06:26.738  5239  5264 I MonitoringInstr: waitForActivitiesToComplete() took: 0ms
+01-30 13:06:26.738  5239  5239 I MonitoringInstr: Activities that are still in CREATED to STOPPED: 0
+01-30 13:06:26.741  1961  2341 I ActivityManager: Force stopping com.dell.sped appid=10133 user=0: finished inst
+01-30 13:06:26.743  1961  2341 I ActivityManager: Killing 5239:com.dell.sped/u0a133 (adj 0): stop com.dell.sped
+01-30 13:06:26.747  1961  2341 W ActivityManager: Scheduling restart of crashed service com.dell.sped/com.google.firebase.iid.FirebaseInstanceIdService in 1920ms
+01-30 13:06:26.751  1961  2341 I ActivityManager:   Force stopping service ServiceRecord{1e9479b u0 com.dell.sped/com.google.firebase.iid.FirebaseInstanceIdService}
+01-30 13:06:26.751  1961  5270 W Binder  : Outgoing transactions from this process must be FLAG_ONEWAY
+01-30 13:06:26.751  1961  5270 W Binder  : java.lang.Throwable
+01-30 13:06:26.751  1961  5270 W Binder  : 	at android.os.BinderProxy.transact(BinderProxy.java:480)
+01-30 13:06:26.751  1961  5270 W Binder  : 	at android.app.IInstrumentationWatcher$Stub$Proxy.instrumentationFinished(IInstrumentationWatcher.java:205)
+01-30 13:06:26.751  1961  5270 W Binder  : 	at com.android.server.am.InstrumentationReporter$MyThread.run(InstrumentationReporter.java:86)
+01-30 13:06:26.752  5216  5216 D AndroidRuntime: Shutting down VM
+01-30 13:06:26.791  1706  1706 I Zygote  : Process 5239 exited due to signal 9 (Killed)
+01-30 13:06:26.820  1961  1989 I ActivityManager: Force stopping com.dell.sped.test appid=10134 user=-1: deletePackageX
+01-30 13:06:26.832  1961  1991 I libprocessgroup: Successfully killed process cgroup uid 10133 pid 5239 in 88ms
+01-30 13:06:26.929  1795  1795 I keystore: clear_uid 10134
+01-30 13:06:26.931  1961  2001 D PackageManager: Instant App installer not found with android.intent.action.INSTALL_INSTANT_APP_PACKAGE
+01-30 13:06:26.933  1961  2001 D PackageManager: Clear ephemeral installer activity
+01-30 13:06:26.943  1961  2001 E PermissionMonitor: unknown permission type: -1for uid: 10134
+01-30 13:06:26.944  1705  1897 I netd    : trafficSetNetPermForUids(-1, [10134]) <0.05ms>
+01-30 13:06:27.047  1961  2001 I system_server: Explicit concurrent copying GC freed 63468(3206KB) AllocSpace objects, 10(328KB) LOS objects, 36% free, 10MB/16MB, paused 802us total 99.381ms
+01-30 13:06:27.055  1961  2001 I ActivityManager: Force stopping com.dell.sped.test appid=10134 user=0: pkg removed
+01-30 13:06:27.087  1961  1961 I RoleManagerService: Granting default permissions...
+01-30 13:06:27.090  1961  1989 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.PACKAGE_REMOVED dat=package:com.dell.sped.test flg=0x4000010 (has extras) } to com.android.musicfx/.Compatibility$Receiver
+01-30 13:06:27.092  1961  1989 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.PACKAGE_REMOVED dat=package:com.dell.sped.test flg=0x4000010 (has extras) } to com.google.android.gms/.games.chimera.GamesSystemBroadcastReceiverProxy
+01-30 13:06:27.092  1961  1989 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.PACKAGE_REMOVED dat=package:com.dell.sped.test flg=0x4000010 (has extras) } to com.google.android.gms/.chimera.GmsIntentOperationService$PersistentTrustedReceiver
+01-30 13:06:27.092  1961  1989 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.PACKAGE_REMOVED dat=package:com.dell.sped.test flg=0x4000010 (has extras) } to com.google.android.googlequicksearchbox/com.google.android.apps.gsa.googlequicksearchbox.GelStubAppWatcher
+01-30 13:06:27.139  1961  1980 E PackageManager: failed to find package com.dell.sped.test
+01-30 13:06:27.139  1961  1980 E OverlayManager: Failed to change enabled overlays for com.dell.sped.test user 0
+01-30 13:06:27.149  2490  2490 I GeofencerStateMachine: removeGeofences: removeRequest=RemoveGeofencingRequest[REMOVE_ALL packageName=com.dell.sped.test]
+01-30 13:06:27.156  1961  2060 I InputReader: Reconfiguring input devices.  changes=0x00000010
+01-30 13:06:27.193  1706  1706 D Zygote  : Forked child process 5279
+01-30 13:06:27.196  1961  1990 W ActivityManager: Slow operation: 73ms so far, now at startProcess: returned from zygote!
+01-30 13:06:27.196  1961  1990 W ActivityManager: Slow operation: 74ms so far, now at startProcess: done updating battery stats
+01-30 13:06:27.196  1961  1990 W ActivityManager: Slow operation: 74ms so far, now at startProcess: building log message
+01-30 13:06:27.196  1961  1990 I ActivityManager: Start proc 5279:com.android.keychain/1000 for service {com.android.keychain/com.android.keychain.KeyChainService}
+01-30 13:06:27.196  1961  1990 W ActivityManager: Slow operation: 74ms so far, now at startProcess: starting to update pids map
+01-30 13:06:27.202  1961  1990 W ActivityManager: Slow operation: 79ms so far, now at startProcess: done updating pids map
+01-30 13:06:27.209  1705  1897 I netd    : trafficSwapActiveStatsMap() <36.86ms>
+01-30 13:06:27.218  1705  1897 I netd    : tetherGetStats() <7.28ms>
+01-30 13:06:27.245  2490  5195 I Fitness : FitCleanupIntentOperation received Intent android.intent.action.PACKAGE_REMOVED [CONTEXT service_id=17 ]
+01-30 13:06:27.252  3872  3872 E CarrierServices: [2] cqf.a: Invalid signature found for com.android.contacts: E39B7BFBE0A67D78292F6CC62E06CA27A2EBF255
+01-30 13:06:27.284  5279  5279 W ndroid.keychai: Unexpected CPU variant for X86 using defaults: x86
+01-30 13:06:27.295  1961  1989 I ActivityManager: Force stopping com.dell.sped appid=10133 user=-1: deletePackageX
+01-30 13:06:27.313  3872  3872 E CarrierServices: [2] cqf.a: Invalid signature found for com.android.contacts: E39B7BFBE0A67D78292F6CC62E06CA27A2EBF255
+01-30 13:06:27.349  1706  1706 D Zygote  : Forked child process 5290
+01-30 13:06:27.350  1961  1990 W ActivityManager: Slow operation: 199ms so far, now at startProcess: returned from zygote!
+01-30 13:06:27.359  2215  2215 D CarrierSvcBindHelper: No carrier app for: 0
+01-30 13:06:27.362  1961  1990 W ActivityManager: Slow operation: 211ms so far, now at startProcess: done updating battery stats
+01-30 13:06:27.362  1961  1990 W ActivityManager: Slow operation: 211ms so far, now at startProcess: building log message
+01-30 13:06:27.362  1961  1990 I ActivityManager: Start proc 5290:com.android.chrome/u0a122 for broadcast {com.android.chrome/org.chromium.chrome.browser.browserservices.ClientAppBroadcastReceiver}
+01-30 13:06:27.363  1961  1990 W ActivityManager: Slow operation: 211ms so far, now at startProcess: starting to update pids map
+01-30 13:06:27.363  1961  1990 W ActivityManager: Slow operation: 211ms so far, now at startProcess: done updating pids map
+01-30 13:06:27.376  5290  5290 W .android.chrom: Unexpected CPU variant for X86 using defaults: x86
+01-30 13:06:27.378  1961  1961 W Looper  : Slow dispatch took 162ms main h=android.app.ActivityThread$H c=android.app.-$$Lambda$LoadedApk$ReceiverDispatcher$Args$_BumDX2UKsnxLVrE6UJsJZkotuA@b7d1887 m=0
+01-30 13:06:27.382  1961  2001 I PackageManager: Removing old permission tree: com.dell.sped.permission.C2D_MESSAGE from package com.dell.sped
+01-30 13:06:27.382  1961  2001 I PackageManager: Un-granting permission android.permission.MANAGE_DOCUMENTS from package com.google.android.youtube (protectionLevel=262146 flags=0x30dbbe45)
+01-30 13:06:27.382  1961  2001 I PackageManager: Un-granting permission com.google.android.googleapps.permission.GOOGLE_AUTH from package com.android.providers.calendar (protectionLevel=2 flags=0x30883e45)
+01-30 13:06:27.382  1961  2001 I PackageManager: Un-granting permission com.google.android.googleapps.permission.GOOGLE_AUTH.cl from package com.android.providers.calendar (protectionLevel=2 flags=0x30883e45)
+01-30 13:06:27.382  1961  2001 I PackageManager: Un-granting permission android.permission.WRITE_SECURE_SETTINGS from package com.google.android.apps.enterprise.dmagent (protectionLevel=50 flags=0x30083e05)
+01-30 13:06:27.382  1961  2001 I PackageManager: Un-granting permission android.permission.CONNECTIVITY_INTERNAL from package com.google.android.apps.enterprise.dmagent (protectionLevel=18 flags=0x30083e05)
+01-30 13:06:27.382  1961  2001 I PackageManager: Un-granting permission android.permission.MANAGE_USB from package com.google.android.apps.enterprise.dmagent (protectionLevel=18 flags=0x30083e05)
+01-30 13:06:27.383  1961  2001 I PackageManager: Un-granting permission android.permission.CHANGE_COMPONENT_ENABLED_STATE from package com.google.android.apps.enterprise.dmagent (protectionLevel=18 flags=0x30083e05)
+01-30 13:06:27.383  1961  2001 I PackageManager: Un-granting permission android.permission.MANAGE_CA_CERTIFICATES from package com.google.android.apps.enterprise.dmagent (protectionLevel=18 flags=0x30083e05)
+01-30 13:06:27.383  1961  2001 I PackageManager: Un-granting permission android.permission.MANAGE_USERS from package com.google.android.apps.enterprise.dmagent (protectionLevel=18 flags=0x30083e05)
+01-30 13:06:27.383  1961  2001 I PackageManager: Un-granting permission com.google.android.setupwizard.READ_DEVICE_ORIGIN from package com.google.android.apps.messaging (protectionLevel=18 flags=0x38cbbe45)
+01-30 13:06:27.383  1961  2001 I PackageManager: Un-granting permission android.permission.BIND_WALLPAPER from package com.android.camera2 (protectionLevel=18 flags=0x20d8bc45)
+01-30 13:06:27.383  1961  2001 I PackageManager: Un-granting permission android.permission.REQUEST_INSTALL_PACKAGES from package com.google.android.gm (protectionLevel=66 flags=0x38cbbe45)
+01-30 13:06:27.384  1961  2001 I PackageManager: Un-granting permission android.permission.BIND_JOB_SERVICE from package com.google.android.music (protectionLevel=2 flags=0x38cbbe65)
+01-30 13:06:27.384  1961  2001 I PackageManager: Un-granting permission android.permission.CONNECTIVITY_USE_RESTRICTED_NETWORKS from package com.google.android.captiveportallogin (protectionLevel=18 flags=0x38c8be45)
+01-30 13:06:27.384  1961  2001 I PackageManager: Un-granting permission android.permission.NETWORK_BYPASS_PRIVATE_DNS from package com.google.android.captiveportallogin (protectionLevel=2 flags=0x38c8be45)
+01-30 13:06:27.384  1961  2001 I PackageManager: Un-granting permission android.permission.REQUEST_INSTALL_PACKAGES from package com.google.android.apps.docs (protectionLevel=66 flags=0x38cbbe45)
+01-30 13:06:27.384  1961  2001 I PackageManager: Un-granting permission android.permission.INTERACT_ACROSS_USERS from package com.google.android.syncadapters.contacts (protectionLevel=50 flags=0x20883e45)
+01-30 13:06:27.384  1961  2001 I PackageManager: Un-granting permission android.permission.REQUEST_INSTALL_PACKAGES from package com.android.chrome (protectionLevel=66 flags=0xa0cbbe45)
+01-30 13:06:27.384  1961  2001 I PackageManager: Un-granting permission com.google.android.apps.now.CURRENT_ACCOUNT_ACCESS from package com.android.chrome (protectionLevel=2 flags=0xa0cbbe45)
+01-30 13:06:27.385  1961  2001 I PackageManager: Un-granting permission android.permission.CAPTURE_VIDEO_OUTPUT from package com.google.android.gms (protectionLevel=2 flags=0xb0cabe45)
+01-30 13:06:27.385  1961  2001 I PackageManager: Un-granting permission android.permission.MANAGE_DEVICE_ADMINS from package com.google.android.gms (protectionLevel=2 flags=0xb0cabe45)
+01-30 13:06:27.385  1961  2001 I PackageManager: Un-granting permission android.permission.MANAGE_ACTIVITY_STACKS from package com.google.android.gms (protectionLevel=2 flags=0xb0cabe45)
+01-30 13:06:27.385  1961  2001 I PackageManager: Un-granting permission android.permission.CAPTURE_SECURE_VIDEO_OUTPUT from package com.google.android.gms (protectionLevel=2 flags=0xb0cabe45)
+01-30 13:06:27.385  1961  2001 I PackageManager: Un-granting permission android.permission.MANAGE_ROLLBACKS from package com.google.android.gms (protectionLevel=514 flags=0xb0cabe45)
+01-30 13:06:27.387  1961  2001 I PackageManager: Un-granting permission com.google.android.googleapps.permission.GOOGLE_AUTH from package com.google.android.videos (protectionLevel=2 flags=0x30dbbe45)
+01-30 13:06:27.387  1961  2001 I PackageManager: Un-granting permission android.permission.WRITE_MEDIA_STORAGE from package com.google.android.apps.photos (protectionLevel=18 flags=0x38d9be45)
+01-30 13:06:27.393  1961  1961 W Looper  : Slow delivery took 295ms main h=android.app.ActivityThread$H c=android.app.-$$Lambda$LoadedApk$ReceiverDispatcher$Args$_BumDX2UKsnxLVrE6UJsJZkotuA@e5a5bdd m=0
+01-30 13:06:27.409  1961  2069 D WifiConfigManager: Remove all networks for app ApplicationInfo{b25d8d9 com.dell.sped.test}
+01-30 13:06:27.423  1961  1961 I ConditionProviders: Disallowing condition provider com.dell.sped.test
+01-30 13:06:27.440  5279  5279 I ndroid.keychai: The ClassLoaderContext is a special shared library.
+01-30 13:06:27.468  5290  5290 I .android.chrom: The ClassLoaderContext is a special shared library.
+01-30 13:06:27.469  1961  1961 W Looper  : Drained
+01-30 13:06:27.477  5290  5290 I .android.chrom: The ClassLoaderContext is a special shared library.
+01-30 13:06:27.507  1961  2069 D WifiConfigStore: Writing to stores completed in 84 ms.
+01-30 13:06:27.519  1961  2069 E PasspointManager: No app ops listener found for com.dell.sped.test
+01-30 13:06:27.527  1961  2069 I DropBoxManagerService: add tag=system_server_wtf isTagEnabled=true flags=0x2
+01-30 13:06:27.578  1961  4455 W system_server: Long monitor contention with owner PackageManager (2001) at void com.android.server.pm.PackageManagerService.removePackageDataLIF(com.android.server.pm.PackageSetting, int[], com.android.server.pm.PackageManagerService$PackageRemovedInfo, int, boolean)(PackageManagerService.java:18934) waiters=2 in int com.android.server.pm.PackageManagerService.checkUidPermission(java.lang.String, int) for 115ms
+01-30 13:06:27.582  1961  1981 W Looper  : Slow dispatch took 144ms android.ui h=com.android.server.am.ActivityManagerService$UiHandler c=null m=53
+01-30 13:06:27.595  2651  3017 W gle.android.gm: Long monitor contention with owner main (2651) at void acva.a(acvc, long)(:com.google.android.gms@202414022@20.24.14 (040700-319035315):17) waiters=0 in void acva.a(acvc, long) for 193ms
+01-30 13:06:27.633  2651  3530 D ActivityThread: Loading provider com.google.android.gms.appstate: com.google.android.gms.appstate.provider.AppStateContentProvider
+01-30 13:06:27.666  1961  2056 W ActivityManager: Unable to start service Intent { act=com.google.android.gms.drive.ApiService.RESET_AFTER_BOOT flg=0x4 cmp=com.google.android.gms/.drive.api.ApiService (has extras) } U=0: not found
+01-30 13:06:27.677  1795  1795 I keystore: clear_uid 10133
+01-30 13:06:27.703  1961  2001 D PackageManager: Instant App installer not found with android.intent.action.INSTALL_INSTANT_APP_PACKAGE
+01-30 13:06:27.703  1961  2001 D PackageManager: Clear ephemeral installer activity
+01-30 13:06:27.707  1961  3346 W ActivityManager: Background start not allowed: service Intent { cmp=com.google.android.apps.messaging/.shared.datamodel.action.execution.ActionExecutorImpl$EmptyService } to com.google.android.apps.messaging/.shared.datamodel.action.execution.ActionExecutorImpl$EmptyService from pid=3355 uid=10114 pkg=com.google.android.apps.messaging startFg?=false
+01-30 13:06:27.725  1961  2001 E PermissionMonitor: unknown permission type: -1for uid: 10133
+01-30 13:06:27.726  1705  1897 E TrafficController: Failed to clean up the permission for 10133: No such file or directory
+01-30 13:06:27.726  1705  1897 I netd    : trafficSetNetPermForUids(-1, [10133]) <0.13ms>
+01-30 13:06:27.733  5279  5331 W KeyChain: Creating new DB.
+01-30 13:06:27.735  5279  5331 W KeyChain: Got Alias from KeyStore: WifiConfigStore.xml.encrypted-checksum.data-integrity-checker-key
+01-30 13:06:27.735  5279  5331 W KeyChain: Existing alias: WifiConfigStore.xml.encrypted-checksum.data-integrity-checker-key
+01-30 13:06:27.735  5279  5331 W KeyChain: Marking as selectable: WifiConfigStore.xml.encrypted-checksum.data-integrity-checker-key
+01-30 13:06:27.746  5290  5290 I LoadedApk: No resource references to update in package com.google.android.trichromelibrary
+01-30 13:06:27.756  2651  5332 I gle.android.gm: IncrementDisableThreadFlip blocked for 18.851ms
+01-30 13:06:27.783  2651  3511 I Icing   : doRemovePackageData com.dell.sped.test
+01-30 13:06:27.911  1706  1706 D Zygote  : Forked child process 5337
+01-30 13:06:27.936  5337  5337 W oid.documentsu: Unexpected CPU variant for X86 using defaults: x86
+01-30 13:06:27.939  1961  1990 W ActivityManager: Slow operation: 52ms so far, now at startProcess: returned from zygote!
+01-30 13:06:27.981  1961  1990 W ActivityManager: Slow operation: 94ms so far, now at startProcess: done updating battery stats
+01-30 13:06:27.981  1961  1990 W ActivityManager: Slow operation: 94ms so far, now at startProcess: building log message
+01-30 13:06:27.982  1961  1990 I ActivityManager: Start proc 5337:com.android.documentsui/u0a61 for broadcast {com.android.documentsui/com.android.documentsui.PackageReceiver}
+01-30 13:06:27.982  1961  1990 W ActivityManager: Slow operation: 94ms so far, now at startProcess: starting to update pids map
+01-30 13:06:27.984  1961  1990 W ActivityManager: Slow operation: 97ms so far, now at startProcess: done updating pids map
+01-30 13:06:27.987  2651  5218 W DriveInitializer: Awaiting to be initialized
+01-30 13:06:28.009  2651  2664 I gle.android.gm: Background young concurrent copying GC freed 46605(3043KB) AllocSpace objects, 19(828KB) LOS objects, 25% free, 10158KB/13MB, paused 17.129ms total 295.725ms
+01-30 13:06:28.040  5337  5337 D ApplicationLoaders: Returning zygote-cached class loader: /system/framework/android.hidl.base-V1.0-java.jar
+01-30 13:06:28.040  5337  5337 D ApplicationLoaders: Returning zygote-cached class loader: /system/framework/android.hidl.manager-V1.0-java.jar
+01-30 13:06:28.040  5337  5337 D ApplicationLoaders: Returning zygote-cached class loader: /system/framework/android.hidl.base-V1.0-java.jar
+01-30 13:06:28.043  5337  5337 I oid.documentsu: The ClassLoaderContext is a special shared library.
+01-30 13:06:28.083  2651  3325 I Icing   : Indexing com.google.android.gms-apps from com.google.android.gms
+01-30 13:06:28.084  2651  3325 I Icing   : Indexing done com.google.android.gms-apps
+01-30 13:06:28.218  3416  3518 I MicroDetectionWorker: #startMicroDetector [speakerMode: 0]
+01-30 13:06:28.221  3416  3518 W ErrorReporter: reportError [type: 211, code: 393244, bug: 0]: errorCode: 393244, engine: 0
+01-30 13:06:28.222  3416  3518 I MicroDetector: Keeping mic open: false
+01-30 13:06:28.222  3416  3518 I MicroDetectionWorker: #onError(false)
+01-30 13:06:28.329  1961  1988 E memtrack: Couldn't load memtrack module
+01-30 13:06:28.329  1961  1988 W android.os.Debug: failed to get memory consumption info: -1
+01-30 13:06:28.341  2651  3325 I PinnedContentDownloader: Finished downloading pinned content.
+01-30 13:06:28.374  1961  1988 E memtrack: Couldn't load memtrack module
+01-30 13:06:28.374  1961  1988 W android.os.Debug: failed to get memory consumption info: -1
+01-30 13:06:28.433  5337  5337 D DocumentsApplication: OverlayManager.setEnabled() result: true
+01-30 13:06:28.450  2651  3530 I ContentMaintenance: Internal cache bytes used: 0; limit: 40626585; download size: 0
+01-30 13:06:28.457  4684  5366 I MediaProvider: Begin Intent { act=android.intent.action.PACKAGE_FULLY_REMOVED dat=package:com.dell.sped.test flg=0x5000010 cmp=com.android.providers.media/.MediaService (has extras) }
+01-30 13:06:28.463  4684  5366 I MediaProvider: End Intent { act=android.intent.action.PACKAGE_FULLY_REMOVED dat=package:com.dell.sped.test flg=0x5000010 cmp=com.android.providers.media/.MediaService (has extras) }
+01-30 13:06:28.470  1961  2738 I ActivityManager: Killing 4438:com.google.android.youtube/u0a123 (adj 975): empty #17
+01-30 13:06:28.521  1706  1706 I Zygote  : Process 4438 exited due to signal 9 (Killed)
+01-30 13:06:28.521  1961  2038 D ConnectivityService: ConnectivityService NetworkRequestInfo binderDied(NetworkRequest [ TRACK_DEFAULT id=23, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED Uid: 10123] ], android.os.BinderProxy@4bc0d9e)
+01-30 13:06:28.521  1961  5107 D ConnectivityService: ConnectivityService NetworkRequestInfo binderDied(NetworkRequest [ LISTEN id=24, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED Uid: 10123] ], android.os.BinderProxy@66c207f)
+01-30 13:06:28.523  1961  2074 D ConnectivityService: releasing NetworkRequest [ TRACK_DEFAULT id=23, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED Uid: 10123] ] (release request)
+01-30 13:06:28.567  1961  1991 I libprocessgroup: Successfully killed process cgroup uid 10123 pid 4438 in 87ms
+01-30 13:06:28.603  2651  3530 I RealtimeCacheCleanup: Beginning Realtime garbage collection.
+01-30 13:06:28.618  2651  3530 I RealtimeCacheCleanup: Finished Realtime garbage collection.
+01-30 13:06:28.620  3355  3745 I Bugle   : CountryCodeDetector: updateMainDeviceCountry from default subscription network country. detected country: us
+01-30 13:06:28.670  2651  5150 I Vision  : Requesting optional module download of ocr.
+01-30 13:06:28.672  1961  5107 I ActivityManager: Killing 4776:com.android.externalstorage/u0a44 (adj 915): empty #17
+01-30 13:06:28.685  2651  5150 I Vision  : Checking for download completion for 131037 -- ocr
+01-30 13:06:28.688  2651  5218 I ChimeraConfigurator: Starting update, reason: 4 urgentFeatures: vision.ocr:-1
+01-30 13:06:28.688  1961  2001 I system_server: Explicit concurrent copying GC freed 46356(2742KB) AllocSpace objects, 26(1740KB) LOS objects, 34% free, 11MB/17MB, paused 5.274ms total 961.659ms
+01-30 13:06:28.689  2651  5218 E ConfigFileUtils: Failed to read config file: /data/user_de/0/com.google.android.gms/app_chimera/next_container.pb: open failed: ENOENT (No such file or directory)
+01-30 13:06:28.702  5337  5337 I ActivityThread: Removing dead content provider:android.content.ContentProviderProxy@4878adf
+01-30 13:06:28.707  1961  2001 I ActivityManager: Force stopping com.dell.sped appid=10133 user=0: pkg removed
+01-30 13:06:28.718  1706  1706 I Zygote  : Process 4776 exited due to signal 9 (Killed)
+01-30 13:06:28.755  1961  2001 E HistoricalRegistry: Interaction before persistence initialized
+01-30 13:06:28.772  1961  1991 I libprocessgroup: Successfully killed process cgroup uid 10044 pid 4776 in 99ms
+01-30 13:06:28.787  1706  1706 D Zygote  : Forked child process 5369
+01-30 13:06:28.794  1961  2060 I InputReader: Reconfiguring input devices.  changes=0x00000010
+01-30 13:06:28.797  1961  1961 I RoleManagerService: Granting default permissions...
+01-30 13:06:28.810  1961  1989 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.PACKAGE_REMOVED dat=package:com.dell.sped flg=0x4000010 (has extras) } to com.android.musicfx/.Compatibility$Receiver
+01-30 13:06:28.811  1961  1989 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.PACKAGE_REMOVED dat=package:com.dell.sped flg=0x4000010 (has extras) } to com.google.android.gms/.games.chimera.GamesSystemBroadcastReceiverProxy
+01-30 13:06:28.812  1961  1990 I ActivityManager: Start proc 5369:com.android.mtp/u0a45 for content provider {com.android.mtp/com.android.mtp.MtpDocumentsProvider}
+01-30 13:06:28.861  1961  1989 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.PACKAGE_REMOVED dat=package:com.dell.sped flg=0x4000010 (has extras) } to com.google.android.gms/.chimera.GmsIntentOperationService$PersistentTrustedReceiver
+01-30 13:06:28.862  1961  1989 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.PACKAGE_REMOVED dat=package:com.dell.sped flg=0x4000010 (has extras) } to com.google.android.googlequicksearchbox/com.google.android.apps.gsa.googlequicksearchbox.GelStubAppWatcher
+01-30 13:06:28.862  5369  5369 W com.android.mt: Unexpected CPU variant for X86 using defaults: x86
+01-30 13:06:28.872  2490  2490 I GeofencerStateMachine: removeGeofences: removeRequest=RemoveGeofencingRequest[REMOVE_ALL packageName=com.dell.sped]
+01-30 13:06:28.899  2398  2419 I s.nexuslaunche: Background concurrent copying GC freed 12107(508KB) AllocSpace objects, 3(68KB) LOS objects, 49% free, 2528KB/5056KB, paused 602us total 188.730ms
+01-30 13:06:28.939  1705  1897 I netd    : trafficSwapActiveStatsMap() <94.97ms>
+01-30 13:06:28.942  1705  1897 I netd    : tetherGetStats() <1.79ms>
+01-30 13:06:28.956  1961  1961 W Looper  : Slow dispatch took 121ms main h=android.app.ActivityThread$H c=android.app.-$$Lambda$LoadedApk$ReceiverDispatcher$Args$_BumDX2UKsnxLVrE6UJsJZkotuA@aec8d5a m=0
+01-30 13:06:28.988  1961  1961 W Looper  : Slow delivery took 212ms main h=android.app.ActivityThread$H c=android.app.-$$Lambda$LoadedApk$ReceiverDispatcher$Args$_BumDX2UKsnxLVrE6UJsJZkotuA@3639567 m=0
+01-30 13:06:28.989  1961  1989 W system_server: Long monitor contention with owner main (1961) at android.content.ComponentName com.android.server.am.ActivityManagerService.startService(android.app.IApplicationThread, android.content.Intent, java.lang.String, boolean, java.lang.String, int)(ActivityManagerService.java:13909) waiters=2 in void com.android.server.am.BroadcastQueue.processNextBroadcast(boolean) for 109ms
+01-30 13:06:29.038  2651  5218 I ChmraDebugLogger: [73] 1801
+01-30 13:06:29.049  1961  3346 W system_server: Long monitor contention with owner main (1961) at android.content.ComponentName com.android.server.am.ActivityManagerService.startService(android.app.IApplicationThread, android.content.Intent, java.lang.String, boolean, java.lang.String, int)(ActivityManagerService.java:13909) waiters=3 in boolean com.android.server.am.ActivityManagerService.refContentProvider(android.os.IBinder, int, int) for 133ms
+01-30 13:06:29.056  1961  1961 I ConditionProviders: Disallowing condition provider com.dell.sped
+01-30 13:06:29.056  1961  2069 D WifiConfigManager: Remove all networks for app ApplicationInfo{5da094f com.dell.sped}
+01-30 13:06:29.084  2651  5218 I ChmraDebugLogger: [30] [VisionOcr.optional:202414000700] permitMetered=true,
+01-30 13:06:29.110  2215  2215 D CarrierSvcBindHelper: No carrier app for: 0
+01-30 13:06:29.111  3872  3872 E CarrierServices: [2] cqf.a: Invalid signature found for com.android.contacts: E39B7BFBE0A67D78292F6CC62E06CA27A2EBF255
+01-30 13:06:29.127  1961  1961 W Looper  : Drained
+01-30 13:06:29.151  2651  5218 W ChimeraConfigService: Retry attempt was throttled.
+01-30 13:06:29.158  5369  5369 I com.android.mt: The ClassLoaderContext is a special shared library.
+01-30 13:06:29.182  3872  3872 E CarrierServices: [2] cqf.a: Invalid signature found for com.android.contacts: E39B7BFBE0A67D78292F6CC62E06CA27A2EBF255
+01-30 13:06:29.257  4684  5395 I MediaProvider: Begin Intent { act=android.intent.action.PACKAGE_FULLY_REMOVED dat=package:com.dell.sped flg=0x5000010 cmp=com.android.providers.media/.MediaService (has extras) }
+01-30 13:06:29.259  4684  5395 I MediaProvider: End Intent { act=android.intent.action.PACKAGE_FULLY_REMOVED dat=package:com.dell.sped flg=0x5000010 cmp=com.android.providers.media/.MediaService (has extras) }
+01-30 13:06:29.270  1961  1977 I ActivityManager: Killing 3566:com.google.android.partnersetup/u0a94 (adj 975): empty #17
+01-30 13:06:29.335  1961  1988 E memtrack: Couldn't load memtrack module
+01-30 13:06:29.335  1961  1988 W android.os.Debug: failed to get memory consumption info: -1
+01-30 13:06:29.335  1961  2069 D WifiConfigStore: Writing to stores completed in 277 ms.
+01-30 13:06:29.336  1961  2069 E PasspointManager: No app ops listener found for com.dell.sped
+01-30 13:06:29.339  1961  2069 I DropBoxManagerService: add tag=system_server_wtf isTagEnabled=true flags=0x2
