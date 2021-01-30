@@ -22,7 +22,7 @@ pipeline {
 
     stage('error') {
       steps {
-        sh '/Users/lukaszkolodziej/Library/Android/sdk/emulator/emulator -avd Pixel_2_API_30'
+        sh './run.sh'
       }
     }
 
