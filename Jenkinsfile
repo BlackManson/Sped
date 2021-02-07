@@ -9,7 +9,8 @@ pipeline {
 
     stage('Test') {
       steps {
-        sh './gradlew check'
+        sh './gradlew test'
+        archiveArtifacts 'app/build/reports/tests/testDebugUnitTest/'
       }
     }
 
