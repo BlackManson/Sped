@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#Start the emulator
+#Start the emulator on mac
 /Users/lukaszkolodziej/Library/Android/sdk/emulator/emulator -avd Nexus_S_API_29 &
 EMULATOR_PID=$!
 
