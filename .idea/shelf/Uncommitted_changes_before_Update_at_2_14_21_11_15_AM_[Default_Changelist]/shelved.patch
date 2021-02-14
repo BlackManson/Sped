@@ -1,0 +1,102 @@
+Index: app/src/test/java/com/dell/sped/GPSDistTest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.dell.sped;\n\nimport org.junit.Test;\n\nimport static org.junit.Assert.*;\n\npublic class GPSDistTest {\n\n    @Test\n    public void check_getters(){\n        GPSDist gpsDist = new GPSDist(12,13,14,15);\n        assertEquals(12.0,gpsDist.x1, 12.0);\n        assertEquals(14.0,gpsDist.x2, 14.0);\n        assertEquals(13.0,gpsDist.y1, 13.0);\n        assertEquals(15.0,gpsDist.x1, 15.0);\n    }\n\n\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/test/java/com/dell/sped/GPSDistTest.java	(revision 1786ea1e013593ee85aff9bf29b694a632e68bfa)
++++ app/src/test/java/com/dell/sped/GPSDistTest.java	(date 1612896159000)
+@@ -15,5 +15,6 @@
+         assertEquals(15.0,gpsDist.x1, 15.0);
+     }
+ 
++}
++
+ 
+-}
+\ No newline at end of file
+Index: app/build.gradle
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>apply plugin: 'com.android.application'\napply plugin: \"org.sonarqube\"\n\nsonarqube {\n    properties {\n        property \"sonar.projectName\", \"sped\"\n        property \"sonar.projectKey\", \"sped\"\n        property \"sonar.host.url\", \"http://34.107.83.75:9000/\"\n        property \"sonar.language\", \"java\"\n        property \"sonar.sources\", \"src/main/\"\n        property \"sonar.login\", \"5ab4f44500fc9833cf734c4e64b6d942bd55c064\"\n    }\n}\n\nandroid {\n    compileSdkVersion 29\n    defaultConfig {\n        applicationId \"com.dell.sped\"\n        minSdkVersion 21\n        targetSdkVersion 29\n        versionCode 1\n        versionName \"1.0\"\n        testInstrumentationRunner \"androidx.test.runner.AndroidJUnitRunner\"\n    }\n    buildTypes {\n        release {\n            minifyEnabled false\n            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'\n        }\n    }\n}\n\ndependencies {\n    implementation fileTree(dir: 'libs', include: ['*.jar'])\n    implementation 'androidx.appcompat:appcompat:1.1.0'\n    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'\n    implementation 'com.google.firebase:firebase-auth:11.0.4'\n    implementation 'com.google.firebase:firebase-database:11.0.4'\n    implementation 'com.google.firebase:firebase-storage:11.0.4'\n    implementation 'com.google.android.gms:play-services-maps:11.0.4'\n    testImplementation 'junit:junit:4.12'\n    androidTestImplementation 'androidx.test.ext:junit:1.1.1'\n    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0'\n    compile 'de.hdodenhof:circleimageview:2.1.0'\n    compile 'com.theartofdev.edmodo:android-image-cropper:2.6.+'\n    compile 'com.squareup.picasso:picasso:2.5.2'\n    implementation 'com.firebaseui:firebase-ui-database:2.3.0'\n    testImplementation 'junit:junit:4.12'\n    implementation 'androidx.recyclerview:recyclerview:1.1.0'\n}\n\n\n\n\napply plugin: 'com.google.gms.google-services'\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/build.gradle	(revision 1786ea1e013593ee85aff9bf29b694a632e68bfa)
++++ app/build.gradle	(date 1612722320000)
+@@ -12,6 +12,7 @@
+     }
+ }
+ 
++
+ android {
+     compileSdkVersion 29
+     defaultConfig {
+Index: app/src/main/java/com/dell/sped/LoginActivity.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.dell.sped;\n\nimport android.app.ProgressDialog;\nimport android.content.Intent;\nimport androidx.annotation.NonNull;\nimport androidx.appcompat.app.AppCompatActivity;\nimport android.os.Bundle;\nimport android.text.TextUtils;\nimport android.view.View;\nimport android.widget.Button;\nimport android.widget.EditText;\nimport android.widget.Toast;\n\nimport com.google.android.gms.tasks.OnCompleteListener;\nimport com.google.android.gms.tasks.Task;\nimport com.google.firebase.auth.AuthResult;\nimport com.google.firebase.auth.FirebaseAuth;\n\npublic class LoginActivity extends AppCompatActivity {\n    EditText editTextEmailLogin;\n    EditText editTextPasswordLogin;\n    Button buttonLoginIn;\n    ProgressDialog progressDialogLogin;\n    private FirebaseAuth mAuth;\n    @Override\n    protected void onCreate(Bundle savedInstanceState) {\n        super.onCreate(savedInstanceState);\n        setContentView(R.layout.activity_login);\n        editTextEmailLogin = (EditText)findViewById(R.id.editTextEmailLogin);\n        editTextPasswordLogin = (EditText)findViewById(R.id.editTextPasswordLogin);\n        buttonLoginIn = (Button)findViewById(R.id.buttonLoginIn);\n        progressDialogLogin = new ProgressDialog(this);\n        mAuth = FirebaseAuth.getInstance();\n        buttonLoginIn.setOnClickListener(new View.OnClickListener() {\n            @Override\n            public void onClick(View view) {\n                String email = editTextEmailLogin.getText().toString().trim();\n                String password = editTextPasswordLogin.getText().toString().trim();\n\n                if(!TextUtils.isEmpty(email) || !TextUtils.isEmpty(password)){\n                    progressDialogLogin.setTitle(\"Logowanie\");\n                    progressDialogLogin.setMessage(\"Proszę czekać\");\n                    progressDialogLogin.setCanceledOnTouchOutside(false);\n                    progressDialogLogin.show();\n                    loginUser(email,password);\n                }\n            }\n        });\n    }\n\n    private void loginUser(String email, String password) {\n        mAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {\n            @Override\n            public void onComplete(@NonNull Task<AuthResult> task) {\n                if(task.isSuccessful()){\n                    progressDialogLogin.dismiss();\n                    Intent intent = new Intent(LoginActivity.this, ProfileActivity.class);\n                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);\n                    startActivity(intent);\n                    finish();\n                }\n                else {\n                    progressDialogLogin.hide();\n                    Toast.makeText(LoginActivity.this,\"Error\",Toast.LENGTH_SHORT).show();\n                }\n            }\n        });\n    }\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/com/dell/sped/LoginActivity.java	(revision 1786ea1e013593ee85aff9bf29b694a632e68bfa)
++++ app/src/main/java/com/dell/sped/LoginActivity.java	(date 1613240309000)
+@@ -4,11 +4,15 @@
+ import android.content.Intent;
+ import androidx.annotation.NonNull;
+ import androidx.appcompat.app.AppCompatActivity;
++
++import android.graphics.Bitmap;
++import android.graphics.BitmapFactory;
+ import android.os.Bundle;
+ import android.text.TextUtils;
+ import android.view.View;
+ import android.widget.Button;
+ import android.widget.EditText;
++import android.widget.ImageView;
+ import android.widget.Toast;
+ 
+ import com.google.android.gms.tasks.OnCompleteListener;
+@@ -21,6 +25,7 @@
+     EditText editTextPasswordLogin;
+     Button buttonLoginIn;
+     ProgressDialog progressDialogLogin;
++    ImageView imageView;
+     private FirebaseAuth mAuth;
+     @Override
+     protected void onCreate(Bundle savedInstanceState) {
+@@ -29,6 +34,8 @@
+         editTextEmailLogin = (EditText)findViewById(R.id.editTextEmailLogin);
+         editTextPasswordLogin = (EditText)findViewById(R.id.editTextPasswordLogin);
+         buttonLoginIn = (Button)findViewById(R.id.buttonLoginIn);
++        imageView = (ImageView) findViewById(R.id.imageView);
++        imageView.setImageBitmap(BitmapFactory.decodeFile("/Users/lukaszkolodziej/Sped/app/src/main/res/drawable/dmt.png"));
+         progressDialogLogin = new ProgressDialog(this);
+         mAuth = FirebaseAuth.getInstance();
+         buttonLoginIn.setOnClickListener(new View.OnClickListener() {
+Index: app/src/main/res/layout/activity_login.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\n<androidx.constraintlayout.widget.ConstraintLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\n    xmlns:app=\"http://schemas.android.com/apk/res-auto\"\n    xmlns:tools=\"http://schemas.android.com/tools\"\n    android:layout_width=\"match_parent\"\n    android:layout_height=\"match_parent\"\n    tools:context=\"com.dell.sped.LoginActivity\">\n\n    <EditText\n        android:id=\"@+id/editTextEmailLogin\"\n        android:layout_width=\"0dp\"\n        android:layout_height=\"wrap_content\"\n        android:layout_marginBottom=\"8dp\"\n        android:layout_marginEnd=\"8dp\"\n        android:layout_marginStart=\"8dp\"\n        android:ems=\"10\"\n        android:hint=\"E-mail\"\n        android:inputType=\"textWebEmailAddress\"\n        app:layout_constraintBottom_toTopOf=\"@+id/editTextPasswordLogin\"\n        app:layout_constraintEnd_toEndOf=\"parent\"\n        app:layout_constraintStart_toStartOf=\"parent\" />\n\n    <EditText\n        android:id=\"@+id/editTextPasswordLogin\"\n        android:layout_width=\"0dp\"\n        android:layout_height=\"wrap_content\"\n        android:layout_marginBottom=\"16dp\"\n        android:layout_marginEnd=\"8dp\"\n        android:layout_marginStart=\"8dp\"\n        android:ems=\"10\"\n        android:hint=\"Hasło\"\n        android:inputType=\"textPassword\"\n        app:layout_constraintBottom_toTopOf=\"@+id/buttonLoginIn\"\n        app:layout_constraintEnd_toEndOf=\"parent\"\n        app:layout_constraintHorizontal_bias=\"0.0\"\n        app:layout_constraintStart_toStartOf=\"parent\" />\n\n    <Button\n        android:id=\"@+id/buttonLoginIn\"\n        android:layout_width=\"0dp\"\n        android:layout_height=\"wrap_content\"\n        android:layout_marginBottom=\"90dp\"\n        android:layout_marginEnd=\"8dp\"\n        android:layout_marginStart=\"8dp\"\n        android:text=\"Zaloguj\"\n        app:layout_constraintBottom_toBottomOf=\"parent\"\n        app:layout_constraintEnd_toEndOf=\"parent\"\n        app:layout_constraintStart_toStartOf=\"parent\" />\n\n</androidx.constraintlayout.widget.ConstraintLayout>\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/activity_login.xml	(revision 1786ea1e013593ee85aff9bf29b694a632e68bfa)
++++ app/src/main/res/layout/activity_login.xml	(date 1613240390000)
+@@ -47,4 +47,15 @@
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintStart_toStartOf="parent" />
+ 
++    <ImageView
++        android:id="@+id/imageView"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        app:layout_constraintBottom_toTopOf="@+id/editTextEmailLogin"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toTopOf="parent"
++        app:srcCompat="@android:drawable/dmt.png" />
++
++
+ </androidx.constraintlayout.widget.ConstraintLayout>

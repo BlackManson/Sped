@@ -24,4 +24,4 @@ LOGCAT_PID=$!
 
 # Stop the background processes
 kill $LOGCAT_PID
-kill $EMULATOR_PID
+# kill $EMULATOR_PID
