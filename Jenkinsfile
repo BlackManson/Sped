@@ -24,7 +24,7 @@ pipeline {
     stage('Run Emulator and preform Tests') {
       steps {
         sh './run.sh'
-        archiveArtifacts 'app/build/reports/androidTests/connected'
+        archiveArtifacts 'app/build/reports/androidTests/connected/'
       }
     }
 
