@@ -71,7 +71,7 @@ public class RegisterActivity extends AppCompatActivity {
 
                     FirebaseUser current_user = FirebaseAuth.getInstance().getCurrentUser();
                     String uid = current_user.getUid();
-                    String d_image = "https://firebasestorage.googleapis.com/v0/b/speed-98149.appspot.com/o/profile_images%2Fdefault.jpg?alt=media&token=71df9f13-edc3-4ab4-9d56-d532bc92aa45";
+                    String d_image = "https://firebasestorage.googleapis.com/v0/b/speed-98149.appspot.com/o/profile_images%2Fdefault.jpg?alt=media&token=27c52b6d-78e4-4e0c-b415-3829df7a54cf";
                     database = FirebaseDatabase.getInstance().getReference().child("Users").child(uid);
                     HashMap<String,String> userMap = new HashMap<>();
                     userMap.put("name", name);

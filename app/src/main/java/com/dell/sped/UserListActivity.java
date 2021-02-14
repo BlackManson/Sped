@@ -2,7 +2,6 @@ package com.dell.sped;
 
 import android.content.Context;
 import android.graphics.Color;
-import android.graphics.Typeface;
 import android.location.Location;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
@@ -90,10 +89,9 @@ public class UserListActivity extends AppCompatActivity {
             TextView mUserOnlineView = (TextView) mView.findViewById(R.id.textViewStatusRow);
             if(online.equals("online")){
                 mUserOnlineView.setTextColor(Color.parseColor("#085912"));
-                mUserOnlineView.setTypeface(null, Typeface.BOLD);
             }
             if(online.equals("offline")){
-                mUserOnlineView.setTextColor(Color.parseColor("#ffffff"));
+                mUserOnlineView.setTextColor(Color.parseColor("#979997"));
             }
             mUserOnlineView.setText(online);
             mUserOnlineView.setAllCaps(true);
