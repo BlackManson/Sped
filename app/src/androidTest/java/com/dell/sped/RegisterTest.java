@@ -142,7 +142,7 @@ public class RegisterTest {
                         isDisplayed()));
         appCompatButton2.perform(click());
 
-        Thread.sleep(7000);
+        Thread.sleep(10000);
         ViewInteraction button = onView(
                 allOf(withId(R.id.buttonList), withText("LISTA UŻYTKOWNIKÓW"),
                         withParent(withParent(withId(android.R.id.content))),

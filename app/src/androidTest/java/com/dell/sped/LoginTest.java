@@ -108,7 +108,7 @@ public class LoginTest {
                                 2),
                         isDisplayed()));
         appCompatButton2.perform(click());
-        Thread.sleep(7000);
+        Thread.sleep(10000);
         ViewInteraction textView = onView(
                 allOf(withId(R.id.textViewLogOut), withText("Wyloguj"),
                         withParent(withParent(withId(android.R.id.content))),
