@@ -7,7 +7,7 @@ pipeline {
       }
     }
 
-    stage('Test') {
+    stage('Unit Tests') {
       steps {
         sh './gradlew test'
         archiveArtifacts 'app/build/reports/tests/testDebugUnitTest/'
@@ -21,9 +21,10 @@ pipeline {
       }
     }
 
-    stage('Run Emulator') {
+    stage('Run Emulator and preform Tests') {
       steps {
         sh './run.sh'
+        archiveArtifacts 'app/build/reports/androidTests/connected/'
       }
     }
 
