@@ -13,6 +13,7 @@ import androidx.test.runner.AndroidJUnit4;
 import org.hamcrest.Description;
 import org.hamcrest.Matcher;
 import org.hamcrest.TypeSafeMatcher;
+import org.hamcrest.core.IsInstanceOf;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -31,13 +32,13 @@ import static org.hamcrest.Matchers.allOf;
 
 @LargeTest
 @RunWith(AndroidJUnit4.class)
-public class PhotoFromGalleryTest {
+public class PhotoTest {
 
     @Rule
     public ActivityTestRule<MainActivity> mActivityTestRule = new ActivityTestRule<>(MainActivity.class);
 
     @Test
-    public void photoFromGalleryTest() {
+    public void photoTest() {
         try {
             Thread.sleep(7000);
         } catch (InterruptedException e) {
@@ -55,7 +56,7 @@ public class PhotoFromGalleryTest {
         appCompatButton.perform(click());
 
         try {
-            Thread.sleep(1000);
+            Thread.sleep(7000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -70,37 +71,27 @@ public class PhotoFromGalleryTest {
                         isDisplayed()));
         appCompatEditText.perform(click());
 
-        ViewInteraction appCompatEditText3 = onView(
-                allOf(withId(R.id.editTextEmailLogin), withText("Z"),
+        ViewInteraction appCompatEditText2 = onView(
+                allOf(withId(R.id.editTextEmailLogin),
                         childAtPosition(
                                 childAtPosition(
                                         withId(android.R.id.content),
                                         0),
                                 0),
                         isDisplayed()));
-        appCompatEditText3.perform(replaceText("zibi@gmail.com"));
+        appCompatEditText2.perform(replaceText("zibi@gmail.com"), closeSoftKeyboard());
+
+        ViewInteraction appCompatEditText3 = onView(
+                allOf(withId(R.id.editTextEmailLogin), withText("zibi@gmail.com"),
+                        childAtPosition(
+                                childAtPosition(
+                                        withId(android.R.id.content),
+                                        0),
+                                0),
+                        isDisplayed()));
+        appCompatEditText3.perform(pressImeActionButton());
 
         ViewInteraction appCompatEditText4 = onView(
-                allOf(withId(R.id.editTextEmailLogin), withText("zibi@gmail.com"),
-                        childAtPosition(
-                                childAtPosition(
-                                        withId(android.R.id.content),
-                                        0),
-                                0),
-                        isDisplayed()));
-        appCompatEditText4.perform(closeSoftKeyboard());
-
-        ViewInteraction appCompatEditText5 = onView(
-                allOf(withId(R.id.editTextEmailLogin), withText("zibi@gmail.com"),
-                        childAtPosition(
-                                childAtPosition(
-                                        withId(android.R.id.content),
-                                        0),
-                                0),
-                        isDisplayed()));
-        appCompatEditText5.perform(pressImeActionButton());
-
-        ViewInteraction appCompatEditText6 = onView(
                 allOf(withId(R.id.editTextPasswordLogin),
                         childAtPosition(
                                 childAtPosition(
@@ -108,9 +99,9 @@ public class PhotoFromGalleryTest {
                                         0),
                                 1),
                         isDisplayed()));
-        appCompatEditText6.perform(replaceText("Zibi!1234"), closeSoftKeyboard());
+        appCompatEditText4.perform(replaceText("Zibi!1234"), closeSoftKeyboard());
 
-        ViewInteraction appCompatEditText7 = onView(
+        ViewInteraction appCompatEditText5 = onView(
                 allOf(withId(R.id.editTextPasswordLogin), withText("Zibi!1234"),
                         childAtPosition(
                                 childAtPosition(
@@ -118,7 +109,7 @@ public class PhotoFromGalleryTest {
                                         0),
                                 1),
                         isDisplayed()));
-        appCompatEditText7.perform(pressImeActionButton());
+        appCompatEditText5.perform(pressImeActionButton());
 
         ViewInteraction appCompatButton2 = onView(
                 allOf(withId(R.id.buttonLoginIn), withText("Zaloguj"),
@@ -131,7 +122,7 @@ public class PhotoFromGalleryTest {
         appCompatButton2.perform(click());
 
         try {
-            Thread.sleep(3000);
+            Thread.sleep(1000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -147,19 +138,20 @@ public class PhotoFromGalleryTest {
         circleImageView.perform(click());
 
         try {
-            Thread.sleep(1000);
+            Thread.sleep(3000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
 
-//        ViewInteraction view = onView(
-//                allOf(withId(com.sec.android.gallery3d.R.id.gl_root_view),
-//                        withParent(withParent(withId(android.R.id.content))),
-//                        isDisplayed()));
-//        view.check(matches(isDisplayed()));
+        ViewInteraction linearLayout = onView(
+                allOf(IsInstanceOf.<View>instanceOf(android.widget.LinearLayout.class),
+                        withParent(allOf(IsInstanceOf.<View>instanceOf(android.widget.ScrollView.class),
+                                withParent(IsInstanceOf.<View>instanceOf(android.widget.FrameLayout.class)))),
+                        isDisplayed()));
+        linearLayout.check(matches(isDisplayed()));
 
         try {
-            Thread.sleep(2000);
+            Thread.sleep(3000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -173,6 +165,36 @@ public class PhotoFromGalleryTest {
                                 2),
                         isDisplayed()));
         actionMenuItemView.perform(click());
+
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        ViewInteraction viewGroup = onView(
+                allOf(withParent(allOf(withId(android.R.id.content),
+                        withParent(withId(R.id.action_bar_root)))),
+                        isDisplayed()));
+        viewGroup.check(matches(isDisplayed()));
+
+        ViewInteraction textView = onView(
+                allOf(withId(R.id.textViewLogOut), withText("Wyloguj"),
+                        withParent(withParent(withId(android.R.id.content))),
+                        isDisplayed()));
+        textView.check(matches(withText("Wyloguj")));
+
+        ViewInteraction button = onView(
+                allOf(withId(R.id.buttonList), withText("LISTA UŻYTKOWNIKÓW"),
+                        withParent(withParent(withId(android.R.id.content))),
+                        isDisplayed()));
+        button.check(matches(isDisplayed()));
+
+        ViewInteraction button2 = onView(
+                allOf(withId(R.id.buttonMap), withText("MAPA"),
+                        withParent(withParent(withId(android.R.id.content))),
+                        isDisplayed()));
+        button2.check(matches(isDisplayed()));
 
         try {
             Thread.sleep(3000);

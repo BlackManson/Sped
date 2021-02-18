@@ -70,10 +70,10 @@ public class RegisterTest {
                                         0),
                                 0),
                         isDisplayed()));
-        appCompatEditText2.perform(replaceText("testUI"), closeSoftKeyboard());
+        appCompatEditText2.perform(replaceText("testUI2"), closeSoftKeyboard());
 
         ViewInteraction appCompatEditText3 = onView(
-                allOf(withId(R.id.editTextName), withText("testUI"),
+                allOf(withId(R.id.editTextName), withText("testUI2"),
                         childAtPosition(
                                 childAtPosition(
                                         withId(android.R.id.content),
@@ -90,10 +90,10 @@ public class RegisterTest {
                                         0),
                                 1),
                         isDisplayed()));
-        appCompatEditText4.perform(replaceText(String.valueOf(index) + "@testUI.pl"), closeSoftKeyboard());
+        appCompatEditText4.perform(replaceText("Test" + String.valueOf(index) + "@testUI.pl"), closeSoftKeyboard());
 
         ViewInteraction appCompatEditText5 = onView(
-                allOf(withId(R.id.editTextEmail), withText(String.valueOf(index) + "@testUI.pl"),
+                allOf(withId(R.id.editTextEmail), withText("Test" + String.valueOf(index) + "@testUI.pl"),
                         childAtPosition(
                                 childAtPosition(
                                         withId(android.R.id.content),
@@ -120,10 +120,10 @@ public class RegisterTest {
                                         0),
                                 2),
                         isDisplayed()));
-        appCompatEditText7.perform(replaceText("12345678"), closeSoftKeyboard());
+        appCompatEditText7.perform(replaceText("Test!1234"), closeSoftKeyboard());
 
         ViewInteraction appCompatEditText8 = onView(
-                allOf(withId(R.id.editTextPassword), withText("12345678"),
+                allOf(withId(R.id.editTextPassword), withText("Test!1234"),
                         childAtPosition(
                                 childAtPosition(
                                         withId(android.R.id.content),
