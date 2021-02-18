@@ -13,11 +13,10 @@ import androidx.test.runner.AndroidJUnit4;
 import org.hamcrest.Description;
 import org.hamcrest.Matcher;
 import org.hamcrest.TypeSafeMatcher;
+import org.hamcrest.core.IsInstanceOf;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-
-import java.util.Random;
 
 import static androidx.test.espresso.Espresso.onView;
 import static androidx.test.espresso.action.ViewActions.click;
@@ -33,27 +32,37 @@ import static org.hamcrest.Matchers.allOf;
 
 @LargeTest
 @RunWith(AndroidJUnit4.class)
-public class RegisterTest {
+public class PhotoTest {
 
     @Rule
     public ActivityTestRule<MainActivity> mActivityTestRule = new ActivityTestRule<>(MainActivity.class);
 
     @Test
-    public void A_registerTest() throws InterruptedException {
-        Random random = new Random();
-        int index = random.nextInt(10000);
+    public void photoTest() {
+        try {
+            Thread.sleep(7000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
         ViewInteraction appCompatButton = onView(
-                allOf(withId(R.id.buttonRegister), withText("Zarejestruj"),
+                allOf(withId(R.id.buttonLogin), withText("Zaloguj"),
                         childAtPosition(
                                 childAtPosition(
                                         withId(android.R.id.content),
                                         0),
-                                1),
+                                0),
                         isDisplayed()));
         appCompatButton.perform(click());
 
+        try {
+            Thread.sleep(7000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
         ViewInteraction appCompatEditText = onView(
-                allOf(withId(R.id.editTextName),
+                allOf(withId(R.id.editTextEmailLogin),
                         childAtPosition(
                                 childAtPosition(
                                         withId(android.R.id.content),
@@ -63,17 +72,17 @@ public class RegisterTest {
         appCompatEditText.perform(click());
 
         ViewInteraction appCompatEditText2 = onView(
-                allOf(withId(R.id.editTextName),
+                allOf(withId(R.id.editTextEmailLogin),
                         childAtPosition(
                                 childAtPosition(
                                         withId(android.R.id.content),
                                         0),
                                 0),
                         isDisplayed()));
-        appCompatEditText2.perform(replaceText("testUI2"), closeSoftKeyboard());
+        appCompatEditText2.perform(replaceText("zibi@gmail.com"), closeSoftKeyboard());
 
         ViewInteraction appCompatEditText3 = onView(
-                allOf(withId(R.id.editTextName), withText("testUI2"),
+                allOf(withId(R.id.editTextEmailLogin), withText("zibi@gmail.com"),
                         childAtPosition(
                                 childAtPosition(
                                         withId(android.R.id.content),
@@ -83,17 +92,17 @@ public class RegisterTest {
         appCompatEditText3.perform(pressImeActionButton());
 
         ViewInteraction appCompatEditText4 = onView(
-                allOf(withId(R.id.editTextEmail),
+                allOf(withId(R.id.editTextPasswordLogin),
                         childAtPosition(
                                 childAtPosition(
                                         withId(android.R.id.content),
                                         0),
                                 1),
                         isDisplayed()));
-        appCompatEditText4.perform(replaceText("Test" + String.valueOf(index) + "@testUI.pl"), closeSoftKeyboard());
+        appCompatEditText4.perform(replaceText("Zibi!1234"), closeSoftKeyboard());
 
         ViewInteraction appCompatEditText5 = onView(
-                allOf(withId(R.id.editTextEmail), withText("Test" + String.valueOf(index) + "@testUI.pl"),
+                allOf(withId(R.id.editTextPasswordLogin), withText("Zibi!1234"),
                         childAtPosition(
                                 childAtPosition(
                                         withId(android.R.id.content),
@@ -102,58 +111,106 @@ public class RegisterTest {
                         isDisplayed()));
         appCompatEditText5.perform(pressImeActionButton());
 
-        ViewInteraction appCompatEditText6 = onView(
-                allOf(withId(R.id.editTextPassword),
-                        childAtPosition(
-                                childAtPosition(
-                                        withId(android.R.id.content),
-                                        0),
-                                2),
-                        isDisplayed()));
-        appCompatEditText6.perform(click());
-
-        ViewInteraction appCompatEditText7 = onView(
-                allOf(withId(R.id.editTextPassword),
-                        childAtPosition(
-                                childAtPosition(
-                                        withId(android.R.id.content),
-                                        0),
-                                2),
-                        isDisplayed()));
-        appCompatEditText7.perform(replaceText("Test!1234"), closeSoftKeyboard());
-
-        ViewInteraction appCompatEditText8 = onView(
-                allOf(withId(R.id.editTextPassword), withText("Test!1234"),
-                        childAtPosition(
-                                childAtPosition(
-                                        withId(android.R.id.content),
-                                        0),
-                                2),
-                        isDisplayed()));
-        appCompatEditText8.perform(pressImeActionButton());
-
         ViewInteraction appCompatButton2 = onView(
-                allOf(withId(R.id.buttonRegisterIn), withText("Zarejestruj"),
+                allOf(withId(R.id.buttonLoginIn), withText("Zaloguj"),
                         childAtPosition(
                                 childAtPosition(
                                         withId(android.R.id.content),
                                         0),
-                                3),
+                                2),
                         isDisplayed()));
         appCompatButton2.perform(click());
 
-        Thread.sleep(10000);
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        ViewInteraction circleImageView = onView(
+                allOf(withId(R.id.imageViewProfile),
+                        childAtPosition(
+                                childAtPosition(
+                                        withId(android.R.id.content),
+                                        0),
+                                0),
+                        isDisplayed()));
+        circleImageView.perform(click());
+
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        ViewInteraction linearLayout = onView(
+                allOf(IsInstanceOf.<View>instanceOf(android.widget.LinearLayout.class),
+                        withParent(allOf(IsInstanceOf.<View>instanceOf(android.widget.ScrollView.class),
+                                withParent(IsInstanceOf.<View>instanceOf(android.widget.FrameLayout.class)))),
+                        isDisplayed()));
+        linearLayout.check(matches(isDisplayed()));
+
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        ViewInteraction actionMenuItemView = onView(
+                allOf(withId(R.id.crop_image_menu_crop), withText("Crop"),
+                        childAtPosition(
+                                childAtPosition(
+                                        withId(R.id.action_bar),
+                                        1),
+                                2),
+                        isDisplayed()));
+        actionMenuItemView.perform(click());
+
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        ViewInteraction viewGroup = onView(
+                allOf(withParent(allOf(withId(android.R.id.content),
+                        withParent(withId(R.id.action_bar_root)))),
+                        isDisplayed()));
+        viewGroup.check(matches(isDisplayed()));
+
+        ViewInteraction textView = onView(
+                allOf(withId(R.id.textViewLogOut), withText("Wyloguj"),
+                        withParent(withParent(withId(android.R.id.content))),
+                        isDisplayed()));
+        textView.check(matches(withText("Wyloguj")));
+
         ViewInteraction button = onView(
                 allOf(withId(R.id.buttonList), withText("LISTA UŻYTKOWNIKÓW"),
                         withParent(withParent(withId(android.R.id.content))),
                         isDisplayed()));
         button.check(matches(isDisplayed()));
 
-        ViewInteraction textView = onView(
-                allOf(withId(R.id.textViewLogOut), withText("Wyloguj"),
+        ViewInteraction button2 = onView(
+                allOf(withId(R.id.buttonMap), withText("MAPA"),
                         withParent(withParent(withId(android.R.id.content))),
                         isDisplayed()));
-        textView.check(matches(isDisplayed())).perform(click());
+        button2.check(matches(isDisplayed()));
+
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        ViewInteraction appCompatTextView = onView(
+                allOf(withId(R.id.textViewLogOut), withText("Wyloguj"),
+                        childAtPosition(
+                                childAtPosition(
+                                        withId(android.R.id.content),
+                                        0),
+                                3),
+                        isDisplayed()));
+        appCompatTextView.perform(click());
     }
 
     private static Matcher<View> childAtPosition(

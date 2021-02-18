@@ -32,13 +32,20 @@ public class LoginActivity extends AppCompatActivity {
         buttonLoginIn = (Button)findViewById(R.id.buttonLoginIn);
         progressDialogLogin = new ProgressDialog(this);
         mAuth = FirebaseAuth.getInstance();
+
         buttonLoginIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String email = editTextEmailLogin.getText().toString().trim();
-                String password = editTextPasswordLogin.getText().toString().trim();
 
-                if(!TextUtils.isEmpty(email) || !TextUtils.isEmpty(password)){
+                String email = editTextEmailLogin.getText().toString().trim();
+                if(email != null && email.length() == 0 )
+                    editTextEmailLogin.setError( "Pole wymagane!" );
+
+                String password = editTextPasswordLogin.getText().toString().trim();
+                if(password != null && password.length() == 0 )
+                    editTextPasswordLogin.setError( "Pole wymagane!" );
+
+                if(!TextUtils.isEmpty(email) && !TextUtils.isEmpty(password)){
                     progressDialogLogin.setTitle("Logowanie");
                     progressDialogLogin.setMessage("Proszę czekać");
                     progressDialogLogin.setCanceledOnTouchOutside(false);

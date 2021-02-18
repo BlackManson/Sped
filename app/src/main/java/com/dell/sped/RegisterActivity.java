@@ -6,6 +6,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -20,15 +21,20 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.HashMap;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class RegisterActivity extends AppCompatActivity {
+
     EditText editTextName;
     EditText editTextEmail;
     EditText editTextPassword;
     Button buttonRegisterIn;
     ProgressDialog progressDialog;
+
     private DatabaseReference database;
     private FirebaseAuth mAuth;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,9 +49,18 @@ public class RegisterActivity extends AppCompatActivity {
         buttonRegisterIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 String name = editTextName.getText().toString().trim();
+                if(name.length() == 0 )
+                    editTextName.setError( "Pole wymagane!" );
+
                 String email = editTextEmail.getText().toString().trim();
+                if(email.length() == 0 && !isValidEmail(email) )
+                    editTextEmail.setError( "Nie poprawny adres email!" );
+
                 String password = editTextPassword.getText().toString().trim();
+                if(password.length() < 8 && !isValidPassword(password) )
+                    editTextPassword.setError( "Hasło powinno posiadać 8 znaków w tym przynajmniej jedną wielką litere, jedną liczbę, jeden znak specjalny!" );
 
                 if(!TextUtils.isEmpty(name) || !TextUtils.isEmpty(email) || !TextUtils.isEmpty(password)){
 
@@ -55,8 +70,6 @@ public class RegisterActivity extends AppCompatActivity {
                     progressDialog.show();
                     register_user(name,email,password);
                 }
-
-
             }
         });
     }
@@ -100,4 +113,24 @@ public class RegisterActivity extends AppCompatActivity {
         });
 
     }
+
+    public static boolean isValidPassword(String password) {
+        Pattern pattern;
+        Matcher matcher;
+        final String PASSWORD_PATTERN = "^(?=.*[0-9])(?=.*[A-Z])(?=.*[@#$%^&+=!])(?=\\S+$).{4,}$";
+        pattern = Pattern.compile(PASSWORD_PATTERN);
+        matcher = pattern.matcher(password);
+
+        return matcher.matches();
+    }
+
+    public static boolean isValidEmail(String email) {
+        Pattern pattern;
+        Matcher matcher;
+        final String PASSWORD_PATTERN = "^(?=.*[0-9])(?=.*[A-Z])(?=.*[@#$%^&+=!])(?=\\S+$).{4,}$";
+        return Patterns.EMAIL_ADDRESS.matcher(email).matches();
+
+
+    }
+
 }
